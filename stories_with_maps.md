@@ -21,7 +21,10 @@ class: center, middle, inverse
 .round[Telling Stories with Maps]
 <br />
 <br />
-.bold[Dr. Benny CHIN]  
+<img src="resources/gix/qr-slides2.png" width="15%"/>
+<br />
+<br />
+.bold[Dr. Benny CHIN] 
 .italic[Lecturer], GIS Unit, Department of Geography, NUS  
 .underline[wcchin@nus.edu.sg]  
 
@@ -31,17 +34,17 @@ class: center, middle, inverse
 ---
 layout: false
 class: left, middle
-### About Me .smaller.round[(Dr. Benny)] .smaller[https://wcchin.github.io]
+### .smaller.round[About Me] - .smaller.blue[GISer who teach Computing in Geography]
 
 .split-50[.column[
-Education: 
+Education:  
 - 2007-2018: BSc, MSc, PhD, Department of Geography, National Taiwan University
 
-Work Experience: 
+Work Experience:  
 - 2019-2024: RF, SUTD & NUS
-- 2024-Present: Lecturer, NUS 
+- 2024-Present: Lecturer, Geography, NUS 
 
-.xkcd.blue[GISer who teach Computing in Geography]
+.red.bold[Geospatial Intelligence Cross-Disciplinary Programme (XDP)]
 
 ].column[
 Teaching: 
@@ -534,6 +537,8 @@ background-size: contain
 
 <div class="box">Computer-using / Total workforce</div>
 
+.footnote.smaller[[Global Computing Workforce](https://gix-academy.github.io/FASS-TMO-2026/resources/AI-work/global_computing_workforce_map_v3.html)]
+
 .footnote-right.small[Generated with Claude]
 
 ---
@@ -543,6 +548,8 @@ background-size: contain
 
 <div class="box">Computing Profession / Total workforce</div>
 
+.footnote.smaller[[Global Computing Workforce](https://gix-academy.github.io/FASS-TMO-2026/resources/AI-work/global_computing_workforce_map_v3.html)]
+
 .footnote-right.small[Generated with Claude]
 
 ---
@@ -551,6 +558,8 @@ background-image: url(resources/AI-work/proportion.png)
 background-size: contain
 
 <div class="box">Computing Profession / Computer-using</div>
+
+.footnote.smaller[[Global Computing Workforce](https://gix-academy.github.io/FASS-TMO-2026/resources/AI-work/global_computing_workforce_map_v3.html)]
 
 .footnote-right.small[Generated with Claude]
 
@@ -671,29 +680,34 @@ GIX brings together:
 .red.bold[AI] — detecting patterns and supporting decisions
 
 .red.bold[Human judgement] — asking better questions and acting responsibly
-].column[
-<img src="resources/gix/gix-logo-3.png" width="98%"/>
+
 .bold.red[Geography × Computing for real-world problems]
 
+].column[
+<img src="resources/gix/gix-logo-3.png" width="98%"/>
+
+<img src="resources/gix/qr-gix-welcome.png" width="50%"/>
 ]]
 
 ---
-class: center, top
+class: right, top
 background-image: url(resources/gix/gix-applications.png)
 background-size: cover
 
 <!--<div class="box">Example applications</div>-->
+<img src="resources/gix/qr-gix-welcome.png" width="15%"/>
 
-.footnote-right.small[[gix-academy.github.io/welcome](https://gix-academy.github.io/welcome/)]
+.footnote-right.smaller[[https://gix-academy.github.io/welcome](https://gix-academy.github.io/welcome/)]
 
 ---
-class: center, top
+class: right, top
 background-image: url(resources/gix/gix-nutshell.png)
 background-size: cover
 
 <!--<div class="box">GIX in a nutshell</div>-->
+<img src="resources/gix/qr-gix-welcome.png" width="15%"/>
 
-.footnote-right.small[[gix-academy.github.io/welcome](https://gix-academy.github.io/welcome/)]
+.footnote-right.smaller[[https://gix-academy.github.io/welcome](https://gix-academy.github.io/welcome/)]
 
 
 ---
@@ -726,4 +740,20 @@ Wherever you go, learn to
 
 .xkcd.xx-large.bold[The .red[next important story] is waiting for you to map it.]
 
+---
+class: center, middle
 
+### More about Geography and GIX
+
+.card-container[
+.card[
+<img src="resources/gix/qr-geog.png" width="75%"/>
+
+  .card-label[Department of Geography]
+]
+.card[
+<img src="resources/gix/qr-nus_chs_gi.png" width="75%"/>
+
+  .card-label[Geospatial Intelligence XDP] 
+]
+]
