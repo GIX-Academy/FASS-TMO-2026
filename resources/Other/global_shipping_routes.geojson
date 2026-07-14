@@ -1,0 +1,2113 @@
+{
+  "type": "FeatureCollection",
+  "name": "Global_Maritime_Shipping_Routes_and_Chokepoints",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "metadata": {
+    "title": "Global Maritime Shipping Routes with Capacity/Weight Estimates",
+    "description": "Illustrative GeoJSON dataset of major global shipping corridors and maritime chokepoints with estimated annual cargo volumes, oil flows, container throughput, and vessel transit counts. Designed for geospatial analysis of maritime network vulnerabilities, particularly Strait of Hormuz dependency.",
+    "data_sources": [
+      "IEA World Energy Outlook (oil flow estimates)",
+      "EIA (Energy Information Administration) chokepoint analysis",
+      "UNCTAD Review of Maritime Transport (cargo volumes, TEU estimates)",
+      "World Port Index (port locations)",
+      "EMODnet (shipping density patterns)",
+      "Various industry reports (vessel transit estimates)"
+    ],
+    "caveats": [
+      "All values are estimates for illustrative/analytical purposes",
+      "Oil flows in million barrels per day (mb/d)",
+      "Cargo in million tonnes per annum",
+      "TEU in million twenty-foot equivalent units per annum",
+      "Route geometries are simplified great-circle approximations",
+      "Actual shipping lanes vary by vessel type, season, and conditions",
+      "Data reflects approximate 2023-2024 baseline levels"
+    ],
+    "coordinate_reference_system": "WGS84 (EPSG:4326)",
+    "created_for": "Geospatial talk: Everything Happens Somewhere",
+    "total_routes": 20,
+    "total_chokepoints": 7
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            49.5,
+            27.0
+          ],
+          [
+            50.2,
+            26.6
+          ],
+          [
+            51.5,
+            25.3
+          ],
+          [
+            54.0,
+            24.5
+          ],
+          [
+            56.25,
+            26.6
+          ],
+          [
+            57.0,
+            25.5
+          ],
+          [
+            59.0,
+            23.5
+          ],
+          [
+            62.0,
+            21.0
+          ],
+          [
+            66.0,
+            18.0
+          ],
+          [
+            72.0,
+            14.0
+          ],
+          [
+            76.0,
+            9.0
+          ],
+          [
+            80.0,
+            6.5
+          ],
+          [
+            85.0,
+            5.0
+          ],
+          [
+            90.0,
+            4.0
+          ],
+          [
+            95.0,
+            3.0
+          ],
+          [
+            100.0,
+            2.0
+          ],
+          [
+            103.5,
+            1.2
+          ],
+          [
+            104.5,
+            1.3
+          ],
+          [
+            107.0,
+            3.0
+          ],
+          [
+            110.0,
+            5.0
+          ],
+          [
+            114.0,
+            10.0
+          ],
+          [
+            117.0,
+            15.0
+          ],
+          [
+            120.0,
+            20.0
+          ],
+          [
+            121.5,
+            25.0
+          ],
+          [
+            122.0,
+            30.0
+          ],
+          [
+            121.5,
+            31.2
+          ]
+        ]
+      },
+      "properties": {
+        "route_id": "PG-EA-MALACCA",
+        "route_name": "Persian Gulf \u2192 East Asia (via Malacca)",
+        "route_type": "crude_oil_and_lng",
+        "hormuz_dependent": true,
+        "chokepoints_traversed": [
+          "Strait of Hormuz",
+          "Strait of Malacca"
+        ],
+        "notes": "Largest oil trade corridor. Carries ~11 mb/d of crude oil and condensate from Gulf producers to refineries in China, Japan, South Korea, India. Estimated based on IEA and EIA data.",
+        "annual_oil_million_barrels_per_day": 11.0,
+        "annual_cargo_million_tonnes": 850,
+        "estimated_vessel_transits_per_year": 25000
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            49.5,
+            27.0
+          ],
+          [
+            51.5,
+            25.3
+          ],
+          [
+            54.0,
+            24.5
+          ],
+          [
+            56.25,
+            26.6
+          ],
+          [
+            57.0,
+            25.5
+          ],
+          [
+            59.0,
+            23.5
+          ],
+          [
+            62.0,
+            21.0
+          ],
+          [
+            66.0,
+            18.0
+          ],
+          [
+            72.0,
+            14.0
+          ],
+          [
+            76.0,
+            9.0
+          ],
+          [
+            80.0,
+            6.5
+          ],
+          [
+            85.0,
+            5.0
+          ],
+          [
+            90.0,
+            4.0
+          ],
+          [
+            95.0,
+            3.0
+          ],
+          [
+            100.0,
+            2.0
+          ],
+          [
+            103.5,
+            1.2
+          ],
+          [
+            104.5,
+            1.3
+          ],
+          [
+            110.0,
+            5.0
+          ],
+          [
+            115.0,
+            10.0
+          ],
+          [
+            120.0,
+            18.0
+          ],
+          [
+            122.0,
+            22.0
+          ],
+          [
+            125.0,
+            28.0
+          ],
+          [
+            128.0,
+            33.0
+          ],
+          [
+            130.0,
+            34.0
+          ],
+          [
+            132.0,
+            34.5
+          ],
+          [
+            135.0,
+            34.7
+          ],
+          [
+            139.5,
+            35.4
+          ]
+        ]
+      },
+      "properties": {
+        "route_id": "PG-JP-KR",
+        "route_name": "Persian Gulf \u2192 Japan / South Korea",
+        "route_type": "crude_oil_and_lng",
+        "hormuz_dependent": true,
+        "chokepoints_traversed": [
+          "Strait of Hormuz",
+          "Strait of Malacca"
+        ],
+        "notes": "Japan and South Korea import ~80-90% of their crude oil from the Persian Gulf. Critical energy lifeline.",
+        "annual_oil_million_barrels_per_day": 5.5,
+        "annual_cargo_million_tonnes": 420,
+        "estimated_vessel_transits_per_year": 12000
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            49.5,
+            27.0
+          ],
+          [
+            51.5,
+            25.3
+          ],
+          [
+            54.0,
+            24.5
+          ],
+          [
+            56.25,
+            26.6
+          ],
+          [
+            57.0,
+            25.5
+          ],
+          [
+            55.0,
+            22.0
+          ],
+          [
+            52.0,
+            17.0
+          ],
+          [
+            48.0,
+            14.0
+          ],
+          [
+            44.0,
+            12.5
+          ],
+          [
+            43.3,
+            12.6
+          ],
+          [
+            42.5,
+            14.0
+          ],
+          [
+            40.0,
+            18.0
+          ],
+          [
+            37.0,
+            22.0
+          ],
+          [
+            34.5,
+            27.5
+          ],
+          [
+            32.58,
+            29.95
+          ],
+          [
+            32.35,
+            31.25
+          ],
+          [
+            30.0,
+            32.0
+          ],
+          [
+            25.0,
+            33.0
+          ],
+          [
+            20.0,
+            34.0
+          ],
+          [
+            15.0,
+            35.5
+          ],
+          [
+            10.0,
+            37.0
+          ],
+          [
+            5.0,
+            37.5
+          ],
+          [
+            1.0,
+            37.0
+          ],
+          [
+            -2.0,
+            36.0
+          ],
+          [
+            -5.35,
+            35.9
+          ],
+          [
+            -8.0,
+            37.0
+          ],
+          [
+            -9.5,
+            39.0
+          ],
+          [
+            -5.0,
+            43.0
+          ],
+          [
+            0.0,
+            46.0
+          ],
+          [
+            1.5,
+            49.5
+          ],
+          [
+            1.0,
+            51.0
+          ],
+          [
+            3.5,
+            51.5
+          ]
+        ]
+      },
+      "properties": {
+        "route_id": "PG-EU-SUEZ",
+        "route_name": "Persian Gulf \u2192 Europe (via Suez)",
+        "route_type": "crude_oil_and_refined_products",
+        "hormuz_dependent": true,
+        "chokepoints_traversed": [
+          "Strait of Hormuz",
+          "Bab el-Mandeb",
+          "Suez Canal",
+          "Strait of Gibraltar"
+        ],
+        "notes": "Gulf oil to European refineries. Also carries LNG and petrochemicals. Traverses four major chokepoints.",
+        "annual_oil_million_barrels_per_day": 3.5,
+        "annual_cargo_million_tonnes": 280,
+        "estimated_vessel_transits_per_year": 8000
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            49.5,
+            27.0
+          ],
+          [
+            51.5,
+            25.3
+          ],
+          [
+            54.0,
+            24.5
+          ],
+          [
+            56.25,
+            26.6
+          ],
+          [
+            57.0,
+            25.5
+          ],
+          [
+            59.0,
+            23.5
+          ],
+          [
+            62.0,
+            21.0
+          ],
+          [
+            66.5,
+            19.0
+          ],
+          [
+            69.0,
+            18.5
+          ],
+          [
+            72.85,
+            18.95
+          ]
+        ]
+      },
+      "properties": {
+        "route_id": "PG-IN",
+        "route_name": "Persian Gulf \u2192 India",
+        "route_type": "crude_oil_and_lng",
+        "hormuz_dependent": true,
+        "chokepoints_traversed": [
+          "Strait of Hormuz"
+        ],
+        "notes": "India imports ~60% of its crude oil from the Persian Gulf. Short route but critical volume.",
+        "annual_oil_million_barrels_per_day": 4.2,
+        "annual_cargo_million_tonnes": 310,
+        "estimated_vessel_transits_per_year": 9000
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.5,
+            31.2
+          ],
+          [
+            120.0,
+            28.0
+          ],
+          [
+            117.0,
+            22.0
+          ],
+          [
+            114.2,
+            22.3
+          ],
+          [
+            110.0,
+            15.0
+          ],
+          [
+            107.0,
+            8.0
+          ],
+          [
+            104.5,
+            1.3
+          ],
+          [
+            103.5,
+            1.2
+          ],
+          [
+            100.0,
+            2.0
+          ],
+          [
+            95.0,
+            3.0
+          ],
+          [
+            90.0,
+            4.0
+          ],
+          [
+            85.0,
+            5.0
+          ],
+          [
+            80.0,
+            6.5
+          ],
+          [
+            76.0,
+            9.0
+          ],
+          [
+            72.0,
+            14.0
+          ],
+          [
+            66.0,
+            18.0
+          ],
+          [
+            59.0,
+            20.0
+          ],
+          [
+            52.0,
+            17.0
+          ],
+          [
+            48.0,
+            14.0
+          ],
+          [
+            44.0,
+            12.5
+          ],
+          [
+            43.3,
+            12.6
+          ],
+          [
+            42.5,
+            14.0
+          ],
+          [
+            40.0,
+            18.0
+          ],
+          [
+            37.0,
+            22.0
+          ],
+          [
+            34.5,
+            27.5
+          ],
+          [
+            32.58,
+            29.95
+          ],
+          [
+            32.35,
+            31.25
+          ],
+          [
+            30.0,
+            32.0
+          ],
+          [
+            25.0,
+            33.5
+          ],
+          [
+            20.0,
+            35.0
+          ],
+          [
+            15.0,
+            36.0
+          ],
+          [
+            10.0,
+            37.5
+          ],
+          [
+            5.0,
+            38.0
+          ],
+          [
+            1.0,
+            37.5
+          ],
+          [
+            -2.0,
+            36.5
+          ],
+          [
+            -5.35,
+            35.9
+          ],
+          [
+            -8.0,
+            37.5
+          ],
+          [
+            -9.5,
+            39.5
+          ],
+          [
+            -5.0,
+            43.5
+          ],
+          [
+            0.0,
+            47.0
+          ],
+          [
+            1.5,
+            49.5
+          ],
+          [
+            3.5,
+            51.5
+          ]
+        ]
+      },
+      "properties": {
+        "route_id": "EA-EU-SUEZ",
+        "route_name": "East Asia \u2192 Europe (via Suez)",
+        "route_type": "container",
+        "hormuz_dependent": false,
+        "chokepoints_traversed": [
+          "Strait of Malacca",
+          "Bab el-Mandeb",
+          "Suez Canal",
+          "Strait of Gibraltar"
+        ],
+        "notes": "The world's busiest container trade lane. ~24 million TEU annually. Highly sensitive to Suez and Malacca disruptions.",
+        "annual_cargo_million_tonnes": 950,
+        "annual_teu_million": 24.0,
+        "estimated_vessel_transits_per_year": 18000
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.5,
+            31.2
+          ],
+          [
+            123.0,
+            33.0
+          ],
+          [
+            130.0,
+            35.0
+          ],
+          [
+            135.0,
+            36.0
+          ],
+          [
+            140.0,
+            38.0
+          ],
+          [
+            150.0,
+            42.0
+          ],
+          [
+            160.0,
+            44.0
+          ],
+          [
+            170.0,
+            46.0
+          ],
+          [
+            180.0,
+            47.0
+          ],
+          [
+            -170.0,
+            47.5
+          ],
+          [
+            -160.0,
+            48.0
+          ],
+          [
+            -150.0,
+            48.5
+          ],
+          [
+            -140.0,
+            48.0
+          ],
+          [
+            -130.0,
+            46.0
+          ],
+          [
+            -125.0,
+            42.0
+          ],
+          [
+            -122.0,
+            38.0
+          ],
+          [
+            -118.5,
+            34.0
+          ]
+        ]
+      },
+      "properties": {
+        "route_id": "EA-NA-PACIFIC",
+        "route_name": "East Asia \u2192 North America West Coast (Transpacific)",
+        "route_type": "container",
+        "hormuz_dependent": false,
+        "chokepoints_traversed": [],
+        "notes": "Largest container trade lane by TEU. No major chokepoint constraints. Great circle route across North Pacific.",
+        "annual_cargo_million_tonnes": 420,
+        "annual_teu_million": 28.0,
+        "estimated_vessel_transits_per_year": 15000
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            3.5,
+            51.5
+          ],
+          [
+            1.0,
+            51.0
+          ],
+          [
+            -2.0,
+            50.5
+          ],
+          [
+            -5.0,
+            50.0
+          ],
+          [
+            -10.0,
+            50.0
+          ],
+          [
+            -15.0,
+            50.0
+          ],
+          [
+            -20.0,
+            49.0
+          ],
+          [
+            -30.0,
+            47.0
+          ],
+          [
+            -40.0,
+            44.0
+          ],
+          [
+            -50.0,
+            42.0
+          ],
+          [
+            -60.0,
+            41.0
+          ],
+          [
+            -65.0,
+            40.5
+          ],
+          [
+            -70.0,
+            40.5
+          ],
+          [
+            -74.0,
+            40.6
+          ]
+        ]
+      },
+      "properties": {
+        "route_id": "EU-NA-ATLANTIC",
+        "route_name": "Europe \u2192 North America East Coast (Transatlantic)",
+        "route_type": "container_and_bulk",
+        "hormuz_dependent": false,
+        "chokepoints_traversed": [
+          "English Channel"
+        ],
+        "notes": "Mature trade lane. Mix of containers, bulk, and RoRo. Relatively unconstrained by chokepoints.",
+        "annual_cargo_million_tonnes": 280,
+        "annual_teu_million": 8.5,
+        "estimated_vessel_transits_per_year": 10000
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            3.4,
+            6.45
+          ],
+          [
+            4.0,
+            4.0
+          ],
+          [
+            5.0,
+            1.0
+          ],
+          [
+            7.0,
+            -3.0
+          ],
+          [
+            9.0,
+            -8.0
+          ],
+          [
+            11.0,
+            -15.0
+          ],
+          [
+            13.0,
+            -23.0
+          ],
+          [
+            15.0,
+            -30.0
+          ],
+          [
+            18.5,
+            -34.5
+          ],
+          [
+            25.0,
+            -35.0
+          ],
+          [
+            35.0,
+            -30.0
+          ],
+          [
+            45.0,
+            -22.0
+          ],
+          [
+            55.0,
+            -15.0
+          ],
+          [
+            65.0,
+            -5.0
+          ],
+          [
+            75.0,
+            2.0
+          ],
+          [
+            80.0,
+            5.0
+          ],
+          [
+            85.0,
+            4.0
+          ],
+          [
+            90.0,
+            3.5
+          ],
+          [
+            95.0,
+            2.5
+          ],
+          [
+            100.0,
+            1.5
+          ],
+          [
+            103.5,
+            1.2
+          ],
+          [
+            110.0,
+            5.0
+          ],
+          [
+            117.0,
+            15.0
+          ],
+          [
+            121.5,
+            31.2
+          ]
+        ]
+      },
+      "properties": {
+        "route_id": "WAF-EA-CAPE",
+        "route_name": "West Africa \u2192 East Asia (Oil via Cape)",
+        "route_type": "crude_oil",
+        "hormuz_dependent": false,
+        "chokepoints_traversed": [
+          "Cape of Good Hope",
+          "Strait of Malacca"
+        ],
+        "notes": "Nigerian and Angolan crude to East Asian refineries. Alternative to Gulf oil. Not Hormuz-dependent.",
+        "annual_oil_million_barrels_per_day": 1.8,
+        "annual_cargo_million_tonnes": 180,
+        "estimated_vessel_transits_per_year": 5000
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -43.17,
+            -22.9
+          ],
+          [
+            -40.0,
+            -20.0
+          ],
+          [
+            -35.0,
+            -12.0
+          ],
+          [
+            -30.0,
+            -5.0
+          ],
+          [
+            -25.0,
+            5.0
+          ],
+          [
+            -20.0,
+            15.0
+          ],
+          [
+            -18.0,
+            25.0
+          ],
+          [
+            -15.0,
+            35.0
+          ],
+          [
+            -10.0,
+            40.0
+          ],
+          [
+            -5.35,
+            35.9
+          ],
+          [
+            -2.0,
+            36.5
+          ],
+          [
+            5.0,
+            38.0
+          ],
+          [
+            9.0,
+            39.5
+          ],
+          [
+            3.5,
+            51.5
+          ]
+        ]
+      },
+      "properties": {
+        "route_id": "SA-EU-ATLANTIC",
+        "route_name": "South America East Coast \u2192 Europe (Bulk & Agri)",
+        "route_type": "bulk_and_container",
+        "hormuz_dependent": false,
+        "chokepoints_traversed": [
+          "Strait of Gibraltar"
+        ],
+        "notes": "Brazilian iron ore, soybeans, and containers to Europe. Major bulk commodity route.",
+        "annual_cargo_million_tonnes": 320,
+        "annual_teu_million": 3.5,
+        "estimated_vessel_transits_per_year": 7000
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            115.75,
+            -32.0
+          ],
+          [
+            114.0,
+            -25.0
+          ],
+          [
+            116.0,
+            -20.0
+          ],
+          [
+            118.0,
+            -18.0
+          ],
+          [
+            120.0,
+            -15.0
+          ],
+          [
+            122.0,
+            -10.0
+          ],
+          [
+            120.0,
+            -5.0
+          ],
+          [
+            117.0,
+            0.0
+          ],
+          [
+            115.0,
+            5.0
+          ],
+          [
+            117.0,
+            10.0
+          ],
+          [
+            120.0,
+            18.0
+          ],
+          [
+            121.5,
+            25.0
+          ],
+          [
+            122.0,
+            30.0
+          ],
+          [
+            121.5,
+            31.2
+          ]
+        ]
+      },
+      "properties": {
+        "route_id": "AU-EA",
+        "route_name": "Australia \u2192 East Asia (LNG & Iron Ore)",
+        "route_type": "bulk_lng_iron_ore",
+        "hormuz_dependent": false,
+        "chokepoints_traversed": [
+          "Lombok Strait"
+        ],
+        "notes": "Australia is the world's largest iron ore and LNG exporter. ~750 Mt of iron ore to China annually. Critical for steel production.",
+        "annual_cargo_million_tonnes": 750,
+        "estimated_vessel_transits_per_year": 11000
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            56.25,
+            26.6
+          ],
+          [
+            57.0,
+            25.5
+          ],
+          [
+            58.0,
+            23.0
+          ],
+          [
+            55.0,
+            20.0
+          ],
+          [
+            52.0,
+            16.0
+          ],
+          [
+            48.0,
+            13.0
+          ],
+          [
+            44.0,
+            12.0
+          ],
+          [
+            43.0,
+            10.0
+          ],
+          [
+            42.0,
+            5.0
+          ],
+          [
+            41.0,
+            0.0
+          ],
+          [
+            40.0,
+            -4.0
+          ],
+          [
+            39.3,
+            -6.8
+          ]
+        ]
+      },
+      "properties": {
+        "route_id": "PG-EAF",
+        "route_name": "Persian Gulf \u2192 East Africa",
+        "route_type": "refined_products_and_general",
+        "hormuz_dependent": true,
+        "chokepoints_traversed": [
+          "Strait of Hormuz",
+          "Bab el-Mandeb"
+        ],
+        "notes": "Fuel and refined products from Gulf to East African ports. Smaller volume but critical for regional energy security.",
+        "annual_oil_million_barrels_per_day": 0.8,
+        "annual_cargo_million_tonnes": 45,
+        "estimated_vessel_transits_per_year": 3000
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.5,
+            31.2
+          ],
+          [
+            123.0,
+            28.0
+          ],
+          [
+            130.0,
+            25.0
+          ],
+          [
+            140.0,
+            20.0
+          ],
+          [
+            150.0,
+            18.0
+          ],
+          [
+            160.0,
+            15.0
+          ],
+          [
+            170.0,
+            12.0
+          ],
+          [
+            180.0,
+            10.0
+          ],
+          [
+            -170.0,
+            9.0
+          ],
+          [
+            -160.0,
+            8.5
+          ],
+          [
+            -150.0,
+            8.0
+          ],
+          [
+            -140.0,
+            8.0
+          ],
+          [
+            -130.0,
+            8.0
+          ],
+          [
+            -120.0,
+            8.0
+          ],
+          [
+            -110.0,
+            8.5
+          ],
+          [
+            -100.0,
+            9.0
+          ],
+          [
+            -85.0,
+            9.5
+          ],
+          [
+            -79.9,
+            9.0
+          ],
+          [
+            -79.55,
+            9.35
+          ],
+          [
+            -78.0,
+            10.0
+          ],
+          [
+            -75.0,
+            14.0
+          ],
+          [
+            -72.0,
+            20.0
+          ],
+          [
+            -70.0,
+            25.0
+          ],
+          [
+            -72.0,
+            30.0
+          ],
+          [
+            -74.0,
+            35.0
+          ],
+          [
+            -74.0,
+            40.6
+          ]
+        ]
+      },
+      "properties": {
+        "route_id": "EA-NA-PANAMA",
+        "route_name": "East Asia \u2192 North America East Coast (via Panama)",
+        "route_type": "container",
+        "hormuz_dependent": false,
+        "chokepoints_traversed": [
+          "Panama Canal"
+        ],
+        "notes": "Asia-US East Coast container trade via Panama Canal. Constrained by canal capacity (Neopanamax). Alternative to Suez route.",
+        "annual_cargo_million_tonnes": 180,
+        "annual_teu_million": 6.0,
+        "estimated_vessel_transits_per_year": 5000
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.5,
+            31.2
+          ],
+          [
+            118.0,
+            24.5
+          ],
+          [
+            114.2,
+            22.3
+          ],
+          [
+            110.0,
+            18.0
+          ],
+          [
+            107.0,
+            12.0
+          ],
+          [
+            106.7,
+            10.8
+          ],
+          [
+            105.0,
+            8.0
+          ],
+          [
+            104.0,
+            3.0
+          ],
+          [
+            103.8,
+            1.35
+          ]
+        ]
+      },
+      "properties": {
+        "route_id": "INTRA-ASIA",
+        "route_name": "Intra-Asia (China \u2192 Southeast Asia)",
+        "route_type": "container_and_bulk",
+        "hormuz_dependent": false,
+        "chokepoints_traversed": [
+          "South China Sea"
+        ],
+        "notes": "Highest vessel density corridor in the world. Intra-Asian trade dominates global container shipping. ~35M TEU.",
+        "annual_cargo_million_tonnes": 650,
+        "annual_teu_million": 35.0,
+        "estimated_vessel_transits_per_year": 40000
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            29.8,
+            59.9
+          ],
+          [
+            27.0,
+            59.5
+          ],
+          [
+            24.0,
+            59.0
+          ],
+          [
+            20.0,
+            58.0
+          ],
+          [
+            18.0,
+            56.0
+          ],
+          [
+            14.0,
+            55.0
+          ],
+          [
+            11.0,
+            57.5
+          ],
+          [
+            8.0,
+            56.0
+          ],
+          [
+            5.0,
+            54.0
+          ],
+          [
+            3.5,
+            51.5
+          ]
+        ]
+      },
+      "properties": {
+        "route_id": "RU-EU-BALTIC",
+        "route_name": "Russia Baltic \u2192 Europe (Oil & Gas)",
+        "route_type": "crude_oil_and_refined_products",
+        "hormuz_dependent": false,
+        "chokepoints_traversed": [
+          "Danish Straits"
+        ],
+        "notes": "Russian crude and refined products to European markets via Baltic. Significantly disrupted since 2022 sanctions.",
+        "annual_oil_million_barrels_per_day": 2.5,
+        "annual_cargo_million_tonnes": 200,
+        "estimated_vessel_transits_per_year": 8000
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            49.5,
+            27.0
+          ],
+          [
+            51.5,
+            25.3
+          ],
+          [
+            54.0,
+            24.5
+          ],
+          [
+            56.25,
+            26.6
+          ],
+          [
+            57.0,
+            25.5
+          ],
+          [
+            58.0,
+            22.0
+          ],
+          [
+            55.0,
+            18.0
+          ],
+          [
+            52.0,
+            14.0
+          ],
+          [
+            48.0,
+            10.0
+          ],
+          [
+            44.0,
+            5.0
+          ],
+          [
+            42.0,
+            0.0
+          ],
+          [
+            40.0,
+            -5.0
+          ],
+          [
+            38.0,
+            -12.0
+          ],
+          [
+            36.0,
+            -20.0
+          ],
+          [
+            33.0,
+            -28.0
+          ],
+          [
+            28.0,
+            -33.0
+          ],
+          [
+            18.5,
+            -34.5
+          ],
+          [
+            10.0,
+            -30.0
+          ],
+          [
+            0.0,
+            -20.0
+          ],
+          [
+            -5.0,
+            -10.0
+          ],
+          [
+            -10.0,
+            0.0
+          ],
+          [
+            -15.0,
+            10.0
+          ],
+          [
+            -18.0,
+            20.0
+          ],
+          [
+            -15.0,
+            30.0
+          ],
+          [
+            -10.0,
+            37.0
+          ],
+          [
+            -5.35,
+            35.9
+          ],
+          [
+            -2.0,
+            36.5
+          ],
+          [
+            1.0,
+            38.0
+          ],
+          [
+            3.5,
+            51.5
+          ]
+        ]
+      },
+      "properties": {
+        "route_id": "PG-EU-CAPE-ALT",
+        "route_name": "Persian Gulf \u2192 Europe (via Cape of Good Hope) [Alternative]",
+        "route_type": "crude_oil_alternative",
+        "hormuz_dependent": true,
+        "chokepoints_traversed": [
+          "Strait of Hormuz",
+          "Cape of Good Hope",
+          "Strait of Gibraltar"
+        ],
+        "notes": "Alternative route avoiding Suez/Bab el-Mandeb. Adds ~6,000 nm and ~14 days. Usage increases during Suez/Red Sea disruptions. Estimated current baseline traffic; surges during crises.",
+        "annual_oil_million_barrels_per_day": 0.5,
+        "annual_cargo_million_tonnes": 40,
+        "estimated_vessel_transits_per_year": 2000
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            56.25,
+            26.6
+          ],
+          [
+            57.0,
+            25.5
+          ],
+          [
+            58.0,
+            22.0
+          ],
+          [
+            55.0,
+            18.0
+          ],
+          [
+            50.0,
+            12.0
+          ],
+          [
+            45.0,
+            5.0
+          ],
+          [
+            42.0,
+            -2.0
+          ],
+          [
+            40.0,
+            -10.0
+          ],
+          [
+            35.0,
+            -20.0
+          ],
+          [
+            28.0,
+            -33.0
+          ],
+          [
+            18.5,
+            -34.5
+          ],
+          [
+            5.0,
+            -30.0
+          ],
+          [
+            -10.0,
+            -25.0
+          ],
+          [
+            -25.0,
+            -20.0
+          ],
+          [
+            -35.0,
+            -18.0
+          ],
+          [
+            -38.5,
+            -12.97
+          ],
+          [
+            -43.17,
+            -22.9
+          ]
+        ]
+      },
+      "properties": {
+        "route_id": "ME-SA-CAPE",
+        "route_name": "Middle East \u2192 South America (via Cape)",
+        "route_type": "crude_oil_and_fertilizers",
+        "hormuz_dependent": true,
+        "chokepoints_traversed": [
+          "Strait of Hormuz",
+          "Cape of Good Hope"
+        ],
+        "notes": "Gulf oil and fertilizers to Brazil. Return cargoes include iron ore and agricultural products.",
+        "annual_oil_million_barrels_per_day": 0.6,
+        "annual_cargo_million_tonnes": 35,
+        "estimated_vessel_transits_per_year": 1500
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            1.5,
+            58.0
+          ],
+          [
+            0.0,
+            56.0
+          ],
+          [
+            -2.0,
+            54.0
+          ],
+          [
+            -5.0,
+            52.0
+          ],
+          [
+            -8.0,
+            50.0
+          ],
+          [
+            -10.0,
+            48.0
+          ],
+          [
+            -12.0,
+            45.0
+          ],
+          [
+            -15.0,
+            40.0
+          ],
+          [
+            -18.0,
+            35.0
+          ],
+          [
+            -20.0,
+            30.0
+          ],
+          [
+            -25.0,
+            20.0
+          ],
+          [
+            -30.0,
+            10.0
+          ],
+          [
+            -40.0,
+            0.0
+          ],
+          [
+            -43.17,
+            -22.9
+          ]
+        ]
+      },
+      "properties": {
+        "route_id": "NSEA-GLOBAL",
+        "route_name": "North Sea \u2192 Global (Brent Crude)",
+        "route_type": "crude_oil",
+        "hormuz_dependent": false,
+        "chokepoints_traversed": [
+          "English Channel",
+          "GIUK Gap"
+        ],
+        "notes": "North Sea (Brent) crude exports. Benchmark pricing crude. Declining production but still significant.",
+        "annual_oil_million_barrels_per_day": 1.2,
+        "annual_cargo_million_tonnes": 90,
+        "estimated_vessel_transits_per_year": 4000
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -90.0,
+            29.0
+          ],
+          [
+            -88.0,
+            28.0
+          ],
+          [
+            -85.0,
+            25.0
+          ],
+          [
+            -82.0,
+            24.0
+          ],
+          [
+            -78.0,
+            25.0
+          ],
+          [
+            -72.0,
+            28.0
+          ],
+          [
+            -65.0,
+            32.0
+          ],
+          [
+            -55.0,
+            38.0
+          ],
+          [
+            -40.0,
+            43.0
+          ],
+          [
+            -25.0,
+            47.0
+          ],
+          [
+            -15.0,
+            49.0
+          ],
+          [
+            -8.0,
+            50.0
+          ],
+          [
+            -5.0,
+            50.5
+          ],
+          [
+            0.0,
+            51.0
+          ],
+          [
+            3.5,
+            51.5
+          ]
+        ]
+      },
+      "properties": {
+        "route_id": "USG-EU",
+        "route_name": "US Gulf \u2192 Europe (LNG & Refined Products)",
+        "route_type": "lng_and_refined_products",
+        "hormuz_dependent": false,
+        "chokepoints_traversed": [
+          "Florida Straits"
+        ],
+        "notes": "US LNG exports to Europe surged post-2022. Also refined products, petrochemicals. Growing corridor.",
+        "annual_oil_million_barrels_per_day": 2.0,
+        "annual_cargo_million_tonnes": 160,
+        "estimated_vessel_transits_per_year": 6000
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            39.3,
+            -6.8
+          ],
+          [
+            42.0,
+            -2.0
+          ],
+          [
+            45.0,
+            2.0
+          ],
+          [
+            48.0,
+            5.0
+          ],
+          [
+            52.0,
+            8.0
+          ],
+          [
+            58.0,
+            12.0
+          ],
+          [
+            65.0,
+            15.0
+          ],
+          [
+            69.0,
+            18.5
+          ],
+          [
+            72.85,
+            18.95
+          ]
+        ]
+      },
+      "properties": {
+        "route_id": "EAF-IN",
+        "route_name": "East Africa \u2192 India",
+        "route_type": "general_cargo",
+        "hormuz_dependent": false,
+        "chokepoints_traversed": [],
+        "notes": "Historical Indian Ocean trade route. Current trade includes agricultural products, minerals, and manufactured goods.",
+        "annual_cargo_million_tonnes": 25,
+        "estimated_vessel_transits_per_year": 2000
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            30.0,
+            69.6
+          ],
+          [
+            40.0,
+            72.0
+          ],
+          [
+            50.0,
+            74.0
+          ],
+          [
+            60.0,
+            75.0
+          ],
+          [
+            70.0,
+            76.0
+          ],
+          [
+            80.0,
+            76.5
+          ],
+          [
+            90.0,
+            76.0
+          ],
+          [
+            100.0,
+            75.5
+          ],
+          [
+            110.0,
+            75.0
+          ],
+          [
+            120.0,
+            74.0
+          ],
+          [
+            130.0,
+            73.0
+          ],
+          [
+            140.0,
+            71.0
+          ],
+          [
+            150.0,
+            69.0
+          ],
+          [
+            160.0,
+            67.0
+          ],
+          [
+            170.0,
+            65.0
+          ],
+          [
+            180.0,
+            63.0
+          ],
+          [
+            -170.0,
+            60.0
+          ],
+          [
+            -165.0,
+            58.0
+          ]
+        ]
+      },
+      "properties": {
+        "route_id": "NSR-ARCTIC",
+        "route_name": "Northern Sea Route (Arctic - Emerging)",
+        "route_type": "lng_and_bulk_emerging",
+        "hormuz_dependent": false,
+        "chokepoints_traversed": [
+          "Bering Strait"
+        ],
+        "notes": "Emerging route as Arctic ice recedes. Russian LNG exports. Could reduce Asia-Europe distance by 40% vs Suez. Currently seasonal and limited.",
+        "annual_cargo_million_tonnes": 35,
+        "estimated_vessel_transits_per_year": 500
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          56.25,
+          26.6
+        ]
+      },
+      "properties": {
+        "feature_type": "chokepoint",
+        "name": "Strait of Hormuz",
+        "width_km": 33,
+        "oil_flow_million_barrels_per_day": 20.5,
+        "annual_cargo_million_tonnes": 1800,
+        "estimated_vessel_transits_per_year": 70000,
+        "notes": "World's most important oil chokepoint. ~20-25% of global seaborne oil."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7,
+          2.5
+        ]
+      },
+      "properties": {
+        "feature_type": "chokepoint",
+        "name": "Strait of Malacca",
+        "width_km": 2.8,
+        "oil_flow_million_barrels_per_day": 16.0,
+        "annual_cargo_million_tonnes": 3200,
+        "estimated_vessel_transits_per_year": 94000,
+        "notes": "Busiest shipping strait. Connects Indian Ocean to Pacific. ~25% of global trade."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.35,
+          31.25
+        ]
+      },
+      "properties": {
+        "feature_type": "chokepoint",
+        "name": "Suez Canal",
+        "width_km": 0.2,
+        "oil_flow_million_barrels_per_day": 5.5,
+        "annual_cargo_million_tonnes": 1200,
+        "estimated_vessel_transits_per_year": 20000,
+        "notes": "Connects Mediterranean to Red Sea. ~12-15% of global trade."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.7,
+          9.2
+        ]
+      },
+      "properties": {
+        "feature_type": "chokepoint",
+        "name": "Panama Canal",
+        "width_km": 0.15,
+        "oil_flow_million_barrels_per_day": 0.9,
+        "annual_cargo_million_tonnes": 520,
+        "estimated_vessel_transits_per_year": 14000,
+        "notes": "Connects Atlantic to Pacific. Constrained by water levels and lock size."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          43.3,
+          12.6
+        ]
+      },
+      "properties": {
+        "feature_type": "chokepoint",
+        "name": "Bab el-Mandeb",
+        "width_km": 26,
+        "oil_flow_million_barrels_per_day": 4.8,
+        "annual_cargo_million_tonnes": 700,
+        "estimated_vessel_transits_per_year": 25000,
+        "notes": "Gateway to Red Sea and Suez Canal. Houthi attacks since 2023 disrupted traffic."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.35,
+          35.9
+        ]
+      },
+      "properties": {
+        "feature_type": "chokepoint",
+        "name": "Strait of Gibraltar",
+        "width_km": 13,
+        "oil_flow_million_barrels_per_day": 3.0,
+        "annual_cargo_million_tonnes": 800,
+        "estimated_vessel_transits_per_year": 75000,
+        "notes": "Connects Atlantic to Mediterranean. High vessel density."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.5,
+          -34.5
+        ]
+      },
+      "properties": {
+        "feature_type": "chokepoint",
+        "name": "Cape of Good Hope",
+        "width_km": null,
+        "oil_flow_million_barrels_per_day": 6.0,
+        "annual_cargo_million_tonnes": 500,
+        "estimated_vessel_transits_per_year": 12000,
+        "notes": "Not a strait but a critical waypoint. Alternative to Suez. Adds significant distance."
+      }
+    }
+  ]
+}

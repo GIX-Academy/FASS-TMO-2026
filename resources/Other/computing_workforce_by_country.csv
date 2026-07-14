@@ -1,0 +1,144 @@
+iso_numeric,iso3_alpha,country_name,total_workforce_M,tier1_jobs_M,tier2_jobs_M,tier3_jobs_M,tier1_pct_of_workforce,tier2_pct_of_workforce,tier3_pct_of_workforce,tier3_share_of_computer_users_pct,confidence,source_notes
+702,SGP,Singapore,3.65,2.708,0.365,0.212,74.2,10.0,5.8,6.4,Direct,"IMDA 2024, MOM 2024"
+840,USA,United States,161.0,102.235,16.1,7.245,63.5,10.0,4.5,5.8,Direct,"BLS 2023, OECD"
+826,GBR,United Kingdom,33.0,20.262,3.135,1.683,61.4,9.5,5.1,6.7,Direct,ONS/Eurostat 2023
+276,DEU,Germany,46.0,27.554,4.37,2.116,59.9,9.5,4.6,6.2,Direct,Eurostat 2023
+250,FRA,France,28.0,16.408,2.52,1.232,58.6,9.0,4.4,6.1,Direct,Eurostat 2023
+752,SWE,Sweden,5.5,3.426,0.605,0.478,62.3,11.0,8.7,10.6,Direct,Eurostat 2024
+246,FIN,Finland,2.8,1.744,0.294,0.202,62.3,10.5,7.2,9.0,Direct,Eurostat 2023
+528,NLD,Netherlands,9.5,6.023,0.998,0.579,63.4,10.5,6.1,7.6,Direct,Eurostat 2023
+372,IRL,Ireland,2.6,1.609,0.26,0.159,61.9,10.0,6.1,7.8,Direct,Eurostat 2021
+233,EST,Estonia,0.7,0.407,0.07,0.048,58.2,10.0,6.8,9.1,Direct,Eurostat 2022
+380,ITA,Italy,25.0,13.2,2.125,0.925,52.8,8.5,3.7,5.7,Direct,Eurostat 2023
+724,ESP,Spain,21.0,11.046,1.785,0.819,52.6,8.5,3.9,6.0,Direct,Eurostat 2023
+616,POL,Poland,17.0,8.5,1.36,0.68,50.0,8.0,4.0,6.5,Direct,Eurostat 2023
+036,AUS,Australia,14.0,8.68,1.33,0.63,62.0,9.5,4.5,5.9,Direct,"ACS/Deloitte, ITU"
+392,JPN,Japan,67.0,39.664,6.03,2.546,59.2,9.0,3.8,5.3,Direct,MIC Japan 2023
+410,KOR,South Korea,28.0,16.716,2.66,1.344,59.7,9.5,4.8,6.5,Direct,MSIT Korea 2023
+124,CAN,Canada,20.0,12.36,2.0,1.04,61.8,10.0,5.2,6.8,Direct,StatCan 2023
+076,BRA,Brazil,99.0,33.66,5.94,1.98,34.0,6.0,2.0,4.8,Direct,"IBGE, ITU 2023"
+484,MEX,Mexico,58.0,17.98,3.19,0.87,31.0,5.5,1.5,3.9,Direct,"INEGI, ITU 2023"
+710,ZAF,South Africa,24.0,6.048,1.2,0.432,25.2,5.0,1.8,5.6,Direct,"Stats SA, ITU"
+818,EGY,Egypt,30.0,6.69,1.35,0.36,22.3,4.5,1.2,4.3,Model,"ITU, World Bank"
+356,IND,India,560.0,92.4,22.4,8.4,16.5,4.0,1.5,6.8,Direct,"NASSCOM, ITU 2023"
+156,CHN,China,740.0,270.1,51.8,18.5,36.5,7.0,2.5,5.4,Direct,"NBS China, ITU"
+360,IDN,Indonesia,138.0,30.912,6.21,1.518,22.4,4.5,1.1,3.9,Model,"BPS, ITU 2023"
+608,PHL,Philippines,49.0,11.368,2.45,0.882,23.2,5.0,1.8,6.0,Model,"PSA, ITU 2023"
+764,THA,Thailand,38.0,10.602,2.09,0.608,27.9,5.5,1.6,4.6,Model,"NIDA, ITU 2023"
+458,MYS,Malaysia,16.0,6.64,1.2,0.48,41.5,7.5,3.0,5.8,Direct,"DOSM, ITU 2023"
+566,NGA,Nigeria,67.0,7.638,2.01,0.402,11.4,3.0,0.6,4.0,Model,"NBS Nigeria, ITU"
+404,KEN,Kenya,21.0,2.898,0.735,0.147,13.8,3.5,0.7,3.9,Model,"KNBS, ITU 2023"
+012,DZA,Algeria,12.0,2.352,0.54,0.108,19.6,4.5,0.9,3.6,Model,"ONS Algeria, ITU"
+682,SAU,Saudi Arabia,14.0,6.132,1.12,0.448,43.8,8.0,3.2,5.8,Direct,MCIT KSA 2023
+784,ARE,UAE,5.9,3.239,0.531,0.242,54.9,9.0,4.1,6.0,Direct,TRA UAE 2023
+643,RUS,Russia,73.0,33.58,6.205,2.555,46.0,8.5,3.5,6.0,Direct,HSE Russia 2023
+792,TUR,Turkey,32.0,12.224,2.24,0.896,38.2,7.0,2.8,5.8,Direct,"Eurostat assoc, ITU"
+586,PAK,Pakistan,72.0,6.48,1.8,0.36,9.0,2.5,0.5,4.2,Model,"PBS, ITU 2023"
+040,AUT,Austria,4.9,3.405,0.466,0.245,69.5,9.5,5.0,6.0,Model (high-income),ITU/Eurostat proxy
+056,BEL,Belgium,5.1,3.636,0.484,0.265,71.3,9.5,5.2,6.0,Model (high-income),ITU/Eurostat proxy
+100,BGR,Bulgaria,3.0,1.611,0.255,0.114,53.7,8.5,3.8,5.8,Model (upper-mid),ITU/Eurostat proxy
+191,HRV,Croatia,1.9,1.153,0.171,0.082,60.7,9.0,4.3,5.8,Model (high-income),ITU/Eurostat proxy
+196,CYP,Cyprus,0.5,0.329,0.048,0.024,65.7,9.5,4.8,6.0,Model (high-income),ITU/Eurostat proxy
+203,CZE,Czechia,5.5,3.619,0.522,0.259,65.8,9.5,4.7,5.9,Model (high-income),ITU/Eurostat proxy
+208,DNK,Denmark,3.0,2.175,0.33,0.195,72.5,11.0,6.5,7.2,Model (high-income),ITU/Eurostat proxy
+348,HUN,Hungary,4.7,2.956,0.423,0.193,62.9,9.0,4.1,5.4,Model (high-income),ITU/Eurostat proxy
+428,LVA,Latvia,0.9,0.572,0.086,0.045,63.5,9.5,5.0,6.4,Model (high-income),ITU/Eurostat proxy
+440,LTU,Lithuania,1.4,0.847,0.126,0.063,60.5,9.0,4.5,6.1,Model (high-income),ITU/Eurostat proxy
+442,LUX,Luxembourg,0.3,0.219,0.033,0.018,73.0,11.0,6.0,6.7,Model (high-income),ITU/Eurostat proxy
+470,MLT,Malta,0.3,0.203,0.029,0.015,67.5,9.5,5.0,6.1,Model (high-income),ITU/Eurostat proxy
+620,PRT,Portugal,5.1,3.101,0.459,0.214,60.8,9.0,4.2,5.7,Model (upper-mid),ITU/Eurostat proxy
+642,ROU,Romania,8.8,4.444,0.704,0.308,50.5,8.0,3.5,5.6,Model (upper-mid),ITU/Eurostat proxy
+703,SVK,Slovakia,2.8,1.848,0.266,0.126,66.0,9.5,4.5,5.6,Model (high-income),ITU/Eurostat proxy
+705,SVN,Slovenia,1.1,0.701,0.105,0.053,63.7,9.5,4.8,6.2,Model (high-income),ITU/Eurostat proxy
+578,NOR,Norway,2.9,2.146,0.319,0.203,74.0,11.0,7.0,7.6,Model (high-income),ITU/Eurostat proxy
+756,CHE,Switzerland,5.3,3.858,0.583,0.329,72.8,11.0,6.2,6.9,Model (high-income),ITU/Eurostat proxy
+300,GRC,Greece,4.2,2.339,0.357,0.16,55.7,8.5,3.8,5.6,Model (upper-mid),ITU/Eurostat proxy
+112,BLR,Belarus,4.6,2.576,0.391,0.161,56.0,8.5,3.5,5.1,Model (upper-mid),ITU/ECA proxy
+804,UKR,Ukraine,17.0,8.636,1.36,0.544,50.8,8.0,3.2,5.2,Model (upper-mid),ITU/ECA proxy
+498,MDA,Moldova,1.5,0.675,0.113,0.037,45.0,7.5,2.5,4.5,Model (upper-mid),ITU/ECA proxy
+688,SRB,Serbia,3.1,1.674,0.264,0.108,54.0,8.5,3.5,5.3,Model (upper-mid),ITU/Eurostat proxy
+807,MKD,North Macedonia,1.0,0.488,0.08,0.032,48.8,8.0,3.2,5.3,Model (upper-mid),ITU/Eurostat proxy
+008,ALB,Albania,1.4,0.721,0.105,0.042,51.5,7.5,3.0,4.8,Model (upper-mid),ITU/Eurostat proxy
+070,BIH,Bosnia & Herz.,1.3,0.669,0.098,0.039,51.5,7.5,3.0,4.8,Model (upper-mid),ITU/Eurostat proxy
+499,MNE,Montenegro,0.25,0.132,0.02,0.008,52.8,8.0,3.2,5.0,Model (upper-mid),ITU/Eurostat proxy
+032,ARG,Argentina,20.0,12.14,1.7,0.56,60.7,8.5,2.8,3.9,Model (upper-mid),ITU/LAC proxy
+152,CHL,Chile,10.0,6.3,0.9,0.3,63.0,9.0,3.0,4.0,Model (upper-mid),ITU/LAC proxy
+170,COL,Colombia,22.0,9.9,1.54,0.44,45.0,7.0,2.0,3.7,Model (upper-mid),ITU/LAC proxy
+604,PER,Peru,17.0,7.854,1.19,0.306,46.2,7.0,1.8,3.3,Model (upper-mid),ITU/LAC proxy
+218,ECU,Ecuador,8.0,3.344,0.52,0.136,41.8,6.5,1.7,3.4,Model (upper-mid),ITU/LAC proxy
+068,BOL,Bolivia,5.5,1.722,0.302,0.066,31.3,5.5,1.2,3.2,Model (lower-mid),ITU/LAC proxy
+600,PRY,Paraguay,3.5,1.627,0.245,0.052,46.5,7.0,1.5,2.7,Model (upper-mid),ITU/LAC proxy
+858,URY,Uruguay,1.7,1.057,0.153,0.048,62.2,9.0,2.8,3.8,Model (high-income),ITU/LAC proxy
+862,VEN,Venezuela,14.0,4.34,0.77,0.21,31.0,5.5,1.5,3.9,Model (upper-mid),ITU/LAC proxy
+340,HND,Honduras,4.0,0.984,0.18,0.036,24.6,4.5,0.9,3.0,Model (lower-mid),ITU/LAC proxy
+222,SLV,El Salvador,3.0,0.957,0.15,0.033,31.9,5.0,1.1,2.9,Model (lower-mid),ITU/LAC proxy
+320,GTM,Guatemala,7.0,2.1,0.35,0.07,30.0,5.0,1.0,2.8,Model (lower-mid),ITU/LAC proxy
+332,HTI,Haiti,4.5,0.81,0.158,0.022,18.0,3.5,0.5,2.3,Model (lower-mid),ITU/LAC proxy
+192,CUB,Cuba,5.5,2.502,0.412,0.11,45.5,7.5,2.0,3.6,Model (upper-mid),ITU/LAC proxy
+388,JAM,Jamaica,1.4,0.767,0.112,0.031,54.8,8.0,2.2,3.4,Model (upper-mid),ITU/LAC proxy
+214,DOM,Dominican Rep.,5.2,2.08,0.338,0.078,40.0,6.5,1.5,3.1,Model (upper-mid),ITU/LAC proxy
+188,CRI,Costa Rica,2.4,1.32,0.204,0.06,55.0,8.5,2.5,3.8,Model (upper-mid),ITU/LAC proxy
+591,PAN,Panama,2.1,0.945,0.147,0.042,45.0,7.0,2.0,3.7,Model (upper-mid),ITU/LAC proxy
+050,BGD,Bangladesh,69.0,15.939,2.76,0.621,23.1,4.0,0.9,3.2,Model (lower-mid),ITU/SA proxy
+144,LKA,Sri Lanka,10.0,3.31,0.55,0.14,33.1,5.5,1.4,3.5,Model (lower-mid),ITU/SA proxy
+524,NPL,Nepal,16.0,4.032,0.64,0.128,25.2,4.0,0.8,2.7,Model (lower-mid),ITU/SA proxy
+104,MMR,Myanmar,25.0,4.45,0.875,0.175,17.8,3.5,0.7,3.2,Model (lower-mid),ITU/SA proxy
+116,KHM,Cambodia,9.0,2.394,0.405,0.081,26.6,4.5,0.9,2.8,Model (lower-mid),ITU/SA proxy
+418,LAO,Laos,3.8,0.882,0.152,0.03,23.2,4.0,0.8,2.9,Model (lower-mid),ITU/SA proxy
+004,AFG,Afghanistan,10.0,0.91,0.25,0.04,9.1,2.5,0.4,3.3,Model (low),ITU/SA proxy
+554,NZL,New Zealand,2.8,1.946,0.266,0.14,69.5,9.5,5.0,6.0,Model (high-income),ITU proxy
+344,HKG,Hong Kong,4.0,2.84,0.42,0.26,71.0,10.5,6.5,7.4,Model (high-income),CSD HK proxy
+158,TWN,Taiwan,11.6,7.714,1.16,0.638,66.5,10.0,5.5,6.7,Model (high-income),DGBAS proxy
+398,KAZ,Kazakhstan,10.0,5.32,0.8,0.28,53.2,8.0,2.8,4.4,Model (upper-mid),ITU/ECA proxy
+860,UZB,Uzbekistan,15.0,5.43,0.9,0.27,36.2,6.0,1.8,4.1,Model (lower-mid),ITU/ECA proxy
+417,KGZ,Kyrgyzstan,3.0,0.891,0.15,0.039,29.7,5.0,1.3,3.6,Model (lower-mid),ITU/ECA proxy
+762,TJK,Tajikistan,4.0,0.708,0.14,0.032,17.7,3.5,0.8,3.6,Model (low),ITU/ECA proxy
+031,AZE,Azerbaijan,5.2,2.87,0.416,0.146,55.2,8.0,2.8,4.2,Model (upper-mid),ITU/ECA proxy
+051,ARM,Armenia,1.5,0.78,0.113,0.037,52.0,7.5,2.5,4.0,Model (upper-mid),ITU/ECA proxy
+268,GEO,Georgia,2.0,0.966,0.15,0.044,48.3,7.5,2.2,3.8,Model (upper-mid),ITU/ECA proxy
+496,MNG,Mongolia,1.4,0.511,0.084,0.021,36.5,6.0,1.5,3.4,Model (lower-mid),ITU/ECA proxy
+364,IRN,Iran,29.0,14.529,2.175,0.696,50.1,7.5,2.4,4.0,Model (upper-mid),ITU/MENA proxy
+368,IRQ,Iraq,10.0,2.98,0.5,0.12,29.8,5.0,1.2,3.3,Model (upper-mid),ITU/MENA proxy
+400,JOR,Jordan,3.0,1.821,0.255,0.084,60.7,8.5,2.8,3.9,Model (upper-mid),ITU/MENA proxy
+422,LBN,Lebanon,2.2,1.199,0.176,0.055,54.5,8.0,2.5,3.8,Model (upper-mid),ITU/MENA proxy
+504,MAR,Morocco,12.0,7.116,1.02,0.264,59.3,8.5,2.2,3.1,Model (lower-mid),ITU/MENA proxy
+788,TUN,Tunisia,4.4,2.068,0.308,0.088,47.0,7.0,2.0,3.6,Model (lower-mid),ITU/MENA proxy
+434,LBY,Libya,2.2,0.462,0.088,0.022,21.0,4.0,1.0,3.8,Model (lower-mid),ITU/MENA proxy
+887,YEM,Yemen,7.0,1.113,0.245,0.042,15.9,3.5,0.6,3.0,Model (low),ITU/MENA proxy
+048,BHR,Bahrain,0.8,0.588,0.08,0.036,73.5,10.0,4.5,5.1,Model (high-income),ITU/MENA proxy
+414,KWT,Kuwait,2.2,1.624,0.22,0.092,73.8,10.0,4.2,4.8,Model (high-income),ITU/MENA proxy
+512,OMN,Oman,2.4,1.272,0.192,0.072,53.0,8.0,3.0,4.7,Model (upper-mid),ITU/MENA proxy
+634,QAT,Qatar,2.1,1.502,0.21,0.095,71.5,10.0,4.5,5.2,Model (high-income),ITU/MENA proxy
+024,AGO,Angola,11.0,1.364,0.33,0.066,12.4,3.0,0.6,3.8,Model (lower-mid),ITU/SSA proxy
+204,BEN,Benin,4.5,0.716,0.158,0.027,15.9,3.5,0.6,3.0,Model (low),ITU/SSA proxy
+072,BWA,Botswana,1.2,0.316,0.054,0.014,26.3,4.5,1.2,3.8,Model (upper-mid),ITU/SSA proxy
+854,BFA,Burkina Faso,8.5,1.003,0.238,0.034,11.8,2.8,0.4,2.7,Model (low),ITU/SSA proxy
+108,BDI,Burundi,5.5,0.259,0.11,0.017,4.7,2.0,0.3,4.3,Model (low),ITU/SSA proxy
+120,CMR,Cameroon,11.0,2.222,0.44,0.088,20.2,4.0,0.8,3.2,Model (lower-mid),ITU/SSA proxy
+140,CAF,Cent. African Rep.,2.2,0.125,0.044,0.007,5.7,2.0,0.3,3.8,Model (low),ITU/SSA proxy
+148,TCD,Chad,6.5,0.241,0.13,0.019,3.7,2.0,0.3,5.0,Model (low),ITU/SSA proxy
+180,COD,DR Congo,31.0,2.201,0.775,0.124,7.1,2.5,0.4,4.0,Model (low),ITU/SSA proxy
+178,COG,Rep. of Congo,2.3,0.14,0.058,0.009,6.1,2.5,0.4,4.4,Model (low),ITU/SSA proxy
+384,CIV,Côte d'Ivoire,10.0,2.45,0.45,0.1,24.5,4.5,1.0,3.3,Model (lower-mid),ITU/SSA proxy
+231,ETH,Ethiopia,57.0,7.125,1.71,0.285,12.5,3.0,0.5,3.1,Model (low),ITU/SSA proxy
+266,GAB,Gabon,0.9,0.28,0.05,0.013,31.1,5.5,1.4,3.7,Model (upper-mid),ITU/SSA proxy
+288,GHA,Ghana,13.0,4.745,0.78,0.195,36.5,6.0,1.5,3.4,Model (lower-mid),ITU/SSA proxy
+324,GIN,Guinea,5.5,0.688,0.165,0.028,12.5,3.0,0.5,3.1,Model (low),ITU/SSA proxy
+426,LSO,Lesotho,1.0,0.139,0.035,0.006,13.9,3.5,0.6,3.3,Model (low),ITU/SSA proxy
+430,LBR,Liberia,2.0,0.25,0.06,0.01,12.5,3.0,0.5,3.1,Model (low),ITU/SSA proxy
+450,MDG,Madagascar,14.0,1.652,0.392,0.056,11.8,2.8,0.4,2.7,Model (low),ITU/SSA proxy
+454,MWI,Malawi,8.0,0.536,0.16,0.024,6.7,2.0,0.3,3.3,Model (low),ITU/SSA proxy
+466,MLI,Mali,7.0,0.497,0.175,0.028,7.1,2.5,0.4,4.0,Model (low),ITU/SSA proxy
+478,MRT,Mauritania,2.0,0.23,0.06,0.01,11.5,3.0,0.5,3.3,Model (low),ITU/SSA proxy
+480,MUS,Mauritius,0.6,0.3,0.045,0.015,50.0,7.5,2.5,4.2,Model (upper-mid),ITU/SSA proxy
+508,MOZ,Mozambique,13.0,1.534,0.364,0.052,11.8,2.8,0.4,2.7,Model (low),ITU/SSA proxy
+516,NAM,Namibia,1.0,0.243,0.045,0.012,24.3,4.5,1.2,4.0,Model (upper-mid),ITU/SSA proxy
+562,NER,Niger,9.0,0.513,0.18,0.027,5.7,2.0,0.3,3.8,Model (low),ITU/SSA proxy
+646,RWA,Rwanda,7.0,0.868,0.21,0.042,12.4,3.0,0.6,3.8,Model (low),ITU/SSA proxy
+686,SEN,Senegal,7.5,1.845,0.338,0.068,24.6,4.5,0.9,3.0,Model (lower-mid),ITU/SSA proxy
+694,SLE,Sierra Leone,3.0,0.216,0.075,0.009,7.2,2.5,0.3,3.0,Model (low),ITU/SSA proxy
+729,SDN,Sudan,14.0,2.212,0.49,0.098,15.8,3.5,0.7,3.5,Model (low),ITU/SSA proxy
+834,TZA,Tanzania,28.0,4.452,0.98,0.168,15.9,3.5,0.6,3.0,Model (low),ITU/SSA proxy
+800,UGA,Uganda,18.0,2.43,0.54,0.09,13.5,3.0,0.5,2.9,Model (low),ITU/SSA proxy
+894,ZMB,Zambia,8.0,0.576,0.2,0.024,7.2,2.5,0.3,3.0,Model (low),ITU/SSA proxy
+716,ZWE,Zimbabwe,7.5,1.583,0.3,0.068,21.1,4.0,0.9,3.5,Model (low),ITU/SSA proxy

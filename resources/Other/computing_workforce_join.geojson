@@ -1,0 +1,2889 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "title": "Computing Workforce Tiers by Country",
+    "description": "Join table for computing workforce tier estimates (2024). Geometries are null \u2014 join to a world boundary layer using iso_numeric (ISO 3166-1 numeric, matches world-atlas/D3/Natural Earth) or iso3_alpha (ISO 3166-1 alpha-3, matches most GIS boundary files). Tier 1 = computer literacy required (basic use). Tier 2 = computational proficiency required (advanced use, non-ICT profession). Tier 3 = computing profession (ICT specialist, formal computing credential expected). Jobs in millions. Percentages of total employed workforce.",
+    "join_keys": {
+      "primary": "iso_numeric \u2014 ISO 3166-1 numeric (string, zero-padded to 3 digits). Matches world-atlas countries-110m.json feature id, D3 topojson, QGIS Natural Earth numeric field.",
+      "secondary": "iso3_alpha  \u2014 ISO 3166-1 alpha-3. Matches Natural Earth ADM0_A3, SOV_A3 fields and most national boundary datasets."
+    },
+    "tier_definitions": {
+      "Tier 1": "Computer literacy required \u2014 routine digital tool use (email, office software, web, ERP). Computing supports the role but is not the technical core.",
+      "Tier 2": "Computational proficiency required \u2014 advanced analytics, GIS, modelling, scripting, or technical software. Computing is a significant skill but not the primary professional credential.",
+      "Tier 3": "Computing profession required \u2014 computing is the primary professional function; formal computing qualification conventionally expected (software engineer, data scientist, cybersecurity, cloud, AI/ML, database, network, GIS developer)."
+    },
+    "confidence_levels": {
+      "Direct": "National statistical office data used directly (e.g., IMDA, BLS, Eurostat, NASSCOM).",
+      "Model (high-income)": "Estimated from ITU internet penetration + GDP/capita band + regional benchmarks. Uncertainty \u00b15pp.",
+      "Model (upper-mid)": "Estimated from proxies. Uncertainty \u00b18pp.",
+      "Model (lower-mid/low)": "Structural proxy estimate. Uncertainty \u00b110-12pp.",
+      "Model (low)": "Structural proxy estimate. Uncertainty \u00b112pp or more.",
+      "Model": "Mixed proxy estimate."
+    },
+    "sources": "Eurostat 2023-24; IMDA 2024; BLS 2023; ITU Facts & Figures 2023-24; ILO ILOSTAT 2023; World Bank WDI 2022-23; NASSCOM 2023; DOSM Malaysia 2023; NBS China; HSE Russia 2023; MCIT Saudi Arabia; TRA UAE; StatCan 2023; MIC Japan; MSIT Korea; IBGE Brazil; INEGI Mexico; Stats SA.",
+    "data_reference_period": "2022-2024",
+    "n_countries": 143
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "702",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "702",
+        "iso3_alpha": "SGP",
+        "country_name": "Singapore",
+        "total_workforce_M": 3.65,
+        "tier1_jobs_M": 2.708,
+        "tier2_jobs_M": 0.365,
+        "tier3_jobs_M": 0.212,
+        "tier1_pct_of_workforce": 74.2,
+        "tier2_pct_of_workforce": 10.0,
+        "tier3_pct_of_workforce": 5.8,
+        "tier3_share_of_computer_users_pct": 6.4,
+        "confidence": "Direct",
+        "source_notes": "IMDA 2024, MOM 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "840",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "840",
+        "iso3_alpha": "USA",
+        "country_name": "United States",
+        "total_workforce_M": 161.0,
+        "tier1_jobs_M": 102.235,
+        "tier2_jobs_M": 16.1,
+        "tier3_jobs_M": 7.245,
+        "tier1_pct_of_workforce": 63.5,
+        "tier2_pct_of_workforce": 10.0,
+        "tier3_pct_of_workforce": 4.5,
+        "tier3_share_of_computer_users_pct": 5.8,
+        "confidence": "Direct",
+        "source_notes": "BLS 2023, OECD"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "826",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "826",
+        "iso3_alpha": "GBR",
+        "country_name": "United Kingdom",
+        "total_workforce_M": 33.0,
+        "tier1_jobs_M": 20.262,
+        "tier2_jobs_M": 3.135,
+        "tier3_jobs_M": 1.683,
+        "tier1_pct_of_workforce": 61.4,
+        "tier2_pct_of_workforce": 9.5,
+        "tier3_pct_of_workforce": 5.1,
+        "tier3_share_of_computer_users_pct": 6.7,
+        "confidence": "Direct",
+        "source_notes": "ONS/Eurostat 2023"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "276",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "276",
+        "iso3_alpha": "DEU",
+        "country_name": "Germany",
+        "total_workforce_M": 46.0,
+        "tier1_jobs_M": 27.554,
+        "tier2_jobs_M": 4.37,
+        "tier3_jobs_M": 2.116,
+        "tier1_pct_of_workforce": 59.9,
+        "tier2_pct_of_workforce": 9.5,
+        "tier3_pct_of_workforce": 4.6,
+        "tier3_share_of_computer_users_pct": 6.2,
+        "confidence": "Direct",
+        "source_notes": "Eurostat 2023"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "250",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "250",
+        "iso3_alpha": "FRA",
+        "country_name": "France",
+        "total_workforce_M": 28.0,
+        "tier1_jobs_M": 16.408,
+        "tier2_jobs_M": 2.52,
+        "tier3_jobs_M": 1.232,
+        "tier1_pct_of_workforce": 58.6,
+        "tier2_pct_of_workforce": 9.0,
+        "tier3_pct_of_workforce": 4.4,
+        "tier3_share_of_computer_users_pct": 6.1,
+        "confidence": "Direct",
+        "source_notes": "Eurostat 2023"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "752",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "752",
+        "iso3_alpha": "SWE",
+        "country_name": "Sweden",
+        "total_workforce_M": 5.5,
+        "tier1_jobs_M": 3.426,
+        "tier2_jobs_M": 0.605,
+        "tier3_jobs_M": 0.478,
+        "tier1_pct_of_workforce": 62.3,
+        "tier2_pct_of_workforce": 11.0,
+        "tier3_pct_of_workforce": 8.7,
+        "tier3_share_of_computer_users_pct": 10.6,
+        "confidence": "Direct",
+        "source_notes": "Eurostat 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "246",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "246",
+        "iso3_alpha": "FIN",
+        "country_name": "Finland",
+        "total_workforce_M": 2.8,
+        "tier1_jobs_M": 1.744,
+        "tier2_jobs_M": 0.294,
+        "tier3_jobs_M": 0.202,
+        "tier1_pct_of_workforce": 62.3,
+        "tier2_pct_of_workforce": 10.5,
+        "tier3_pct_of_workforce": 7.2,
+        "tier3_share_of_computer_users_pct": 9.0,
+        "confidence": "Direct",
+        "source_notes": "Eurostat 2023"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "528",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "528",
+        "iso3_alpha": "NLD",
+        "country_name": "Netherlands",
+        "total_workforce_M": 9.5,
+        "tier1_jobs_M": 6.023,
+        "tier2_jobs_M": 0.998,
+        "tier3_jobs_M": 0.579,
+        "tier1_pct_of_workforce": 63.4,
+        "tier2_pct_of_workforce": 10.5,
+        "tier3_pct_of_workforce": 6.1,
+        "tier3_share_of_computer_users_pct": 7.6,
+        "confidence": "Direct",
+        "source_notes": "Eurostat 2023"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "372",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "372",
+        "iso3_alpha": "IRL",
+        "country_name": "Ireland",
+        "total_workforce_M": 2.6,
+        "tier1_jobs_M": 1.609,
+        "tier2_jobs_M": 0.26,
+        "tier3_jobs_M": 0.159,
+        "tier1_pct_of_workforce": 61.9,
+        "tier2_pct_of_workforce": 10.0,
+        "tier3_pct_of_workforce": 6.1,
+        "tier3_share_of_computer_users_pct": 7.8,
+        "confidence": "Direct",
+        "source_notes": "Eurostat 2021"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "233",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "233",
+        "iso3_alpha": "EST",
+        "country_name": "Estonia",
+        "total_workforce_M": 0.7,
+        "tier1_jobs_M": 0.407,
+        "tier2_jobs_M": 0.07,
+        "tier3_jobs_M": 0.048,
+        "tier1_pct_of_workforce": 58.2,
+        "tier2_pct_of_workforce": 10.0,
+        "tier3_pct_of_workforce": 6.8,
+        "tier3_share_of_computer_users_pct": 9.1,
+        "confidence": "Direct",
+        "source_notes": "Eurostat 2022"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "380",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "380",
+        "iso3_alpha": "ITA",
+        "country_name": "Italy",
+        "total_workforce_M": 25.0,
+        "tier1_jobs_M": 13.2,
+        "tier2_jobs_M": 2.125,
+        "tier3_jobs_M": 0.925,
+        "tier1_pct_of_workforce": 52.8,
+        "tier2_pct_of_workforce": 8.5,
+        "tier3_pct_of_workforce": 3.7,
+        "tier3_share_of_computer_users_pct": 5.7,
+        "confidence": "Direct",
+        "source_notes": "Eurostat 2023"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "724",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "724",
+        "iso3_alpha": "ESP",
+        "country_name": "Spain",
+        "total_workforce_M": 21.0,
+        "tier1_jobs_M": 11.046,
+        "tier2_jobs_M": 1.785,
+        "tier3_jobs_M": 0.819,
+        "tier1_pct_of_workforce": 52.6,
+        "tier2_pct_of_workforce": 8.5,
+        "tier3_pct_of_workforce": 3.9,
+        "tier3_share_of_computer_users_pct": 6.0,
+        "confidence": "Direct",
+        "source_notes": "Eurostat 2023"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "616",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "616",
+        "iso3_alpha": "POL",
+        "country_name": "Poland",
+        "total_workforce_M": 17.0,
+        "tier1_jobs_M": 8.5,
+        "tier2_jobs_M": 1.36,
+        "tier3_jobs_M": 0.68,
+        "tier1_pct_of_workforce": 50.0,
+        "tier2_pct_of_workforce": 8.0,
+        "tier3_pct_of_workforce": 4.0,
+        "tier3_share_of_computer_users_pct": 6.5,
+        "confidence": "Direct",
+        "source_notes": "Eurostat 2023"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "036",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "036",
+        "iso3_alpha": "AUS",
+        "country_name": "Australia",
+        "total_workforce_M": 14.0,
+        "tier1_jobs_M": 8.68,
+        "tier2_jobs_M": 1.33,
+        "tier3_jobs_M": 0.63,
+        "tier1_pct_of_workforce": 62.0,
+        "tier2_pct_of_workforce": 9.5,
+        "tier3_pct_of_workforce": 4.5,
+        "tier3_share_of_computer_users_pct": 5.9,
+        "confidence": "Direct",
+        "source_notes": "ACS/Deloitte, ITU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "392",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "392",
+        "iso3_alpha": "JPN",
+        "country_name": "Japan",
+        "total_workforce_M": 67.0,
+        "tier1_jobs_M": 39.664,
+        "tier2_jobs_M": 6.03,
+        "tier3_jobs_M": 2.546,
+        "tier1_pct_of_workforce": 59.2,
+        "tier2_pct_of_workforce": 9.0,
+        "tier3_pct_of_workforce": 3.8,
+        "tier3_share_of_computer_users_pct": 5.3,
+        "confidence": "Direct",
+        "source_notes": "MIC Japan 2023"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "410",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "410",
+        "iso3_alpha": "KOR",
+        "country_name": "South Korea",
+        "total_workforce_M": 28.0,
+        "tier1_jobs_M": 16.716,
+        "tier2_jobs_M": 2.66,
+        "tier3_jobs_M": 1.344,
+        "tier1_pct_of_workforce": 59.7,
+        "tier2_pct_of_workforce": 9.5,
+        "tier3_pct_of_workforce": 4.8,
+        "tier3_share_of_computer_users_pct": 6.5,
+        "confidence": "Direct",
+        "source_notes": "MSIT Korea 2023"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "124",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "124",
+        "iso3_alpha": "CAN",
+        "country_name": "Canada",
+        "total_workforce_M": 20.0,
+        "tier1_jobs_M": 12.36,
+        "tier2_jobs_M": 2.0,
+        "tier3_jobs_M": 1.04,
+        "tier1_pct_of_workforce": 61.8,
+        "tier2_pct_of_workforce": 10.0,
+        "tier3_pct_of_workforce": 5.2,
+        "tier3_share_of_computer_users_pct": 6.8,
+        "confidence": "Direct",
+        "source_notes": "StatCan 2023"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "076",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "076",
+        "iso3_alpha": "BRA",
+        "country_name": "Brazil",
+        "total_workforce_M": 99.0,
+        "tier1_jobs_M": 33.66,
+        "tier2_jobs_M": 5.94,
+        "tier3_jobs_M": 1.98,
+        "tier1_pct_of_workforce": 34.0,
+        "tier2_pct_of_workforce": 6.0,
+        "tier3_pct_of_workforce": 2.0,
+        "tier3_share_of_computer_users_pct": 4.8,
+        "confidence": "Direct",
+        "source_notes": "IBGE, ITU 2023"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "484",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "484",
+        "iso3_alpha": "MEX",
+        "country_name": "Mexico",
+        "total_workforce_M": 58.0,
+        "tier1_jobs_M": 17.98,
+        "tier2_jobs_M": 3.19,
+        "tier3_jobs_M": 0.87,
+        "tier1_pct_of_workforce": 31.0,
+        "tier2_pct_of_workforce": 5.5,
+        "tier3_pct_of_workforce": 1.5,
+        "tier3_share_of_computer_users_pct": 3.9,
+        "confidence": "Direct",
+        "source_notes": "INEGI, ITU 2023"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "710",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "710",
+        "iso3_alpha": "ZAF",
+        "country_name": "South Africa",
+        "total_workforce_M": 24.0,
+        "tier1_jobs_M": 6.048,
+        "tier2_jobs_M": 1.2,
+        "tier3_jobs_M": 0.432,
+        "tier1_pct_of_workforce": 25.2,
+        "tier2_pct_of_workforce": 5.0,
+        "tier3_pct_of_workforce": 1.8,
+        "tier3_share_of_computer_users_pct": 5.6,
+        "confidence": "Direct",
+        "source_notes": "Stats SA, ITU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "818",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "818",
+        "iso3_alpha": "EGY",
+        "country_name": "Egypt",
+        "total_workforce_M": 30.0,
+        "tier1_jobs_M": 6.69,
+        "tier2_jobs_M": 1.35,
+        "tier3_jobs_M": 0.36,
+        "tier1_pct_of_workforce": 22.3,
+        "tier2_pct_of_workforce": 4.5,
+        "tier3_pct_of_workforce": 1.2,
+        "tier3_share_of_computer_users_pct": 4.3,
+        "confidence": "Model",
+        "source_notes": "ITU, World Bank"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "356",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "356",
+        "iso3_alpha": "IND",
+        "country_name": "India",
+        "total_workforce_M": 560.0,
+        "tier1_jobs_M": 92.4,
+        "tier2_jobs_M": 22.4,
+        "tier3_jobs_M": 8.4,
+        "tier1_pct_of_workforce": 16.5,
+        "tier2_pct_of_workforce": 4.0,
+        "tier3_pct_of_workforce": 1.5,
+        "tier3_share_of_computer_users_pct": 6.8,
+        "confidence": "Direct",
+        "source_notes": "NASSCOM, ITU 2023"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "156",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "156",
+        "iso3_alpha": "CHN",
+        "country_name": "China",
+        "total_workforce_M": 740.0,
+        "tier1_jobs_M": 270.1,
+        "tier2_jobs_M": 51.8,
+        "tier3_jobs_M": 18.5,
+        "tier1_pct_of_workforce": 36.5,
+        "tier2_pct_of_workforce": 7.0,
+        "tier3_pct_of_workforce": 2.5,
+        "tier3_share_of_computer_users_pct": 5.4,
+        "confidence": "Direct",
+        "source_notes": "NBS China, ITU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "360",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "360",
+        "iso3_alpha": "IDN",
+        "country_name": "Indonesia",
+        "total_workforce_M": 138.0,
+        "tier1_jobs_M": 30.912,
+        "tier2_jobs_M": 6.21,
+        "tier3_jobs_M": 1.518,
+        "tier1_pct_of_workforce": 22.4,
+        "tier2_pct_of_workforce": 4.5,
+        "tier3_pct_of_workforce": 1.1,
+        "tier3_share_of_computer_users_pct": 3.9,
+        "confidence": "Model",
+        "source_notes": "BPS, ITU 2023"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "608",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "608",
+        "iso3_alpha": "PHL",
+        "country_name": "Philippines",
+        "total_workforce_M": 49.0,
+        "tier1_jobs_M": 11.368,
+        "tier2_jobs_M": 2.45,
+        "tier3_jobs_M": 0.882,
+        "tier1_pct_of_workforce": 23.2,
+        "tier2_pct_of_workforce": 5.0,
+        "tier3_pct_of_workforce": 1.8,
+        "tier3_share_of_computer_users_pct": 6.0,
+        "confidence": "Model",
+        "source_notes": "PSA, ITU 2023"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "764",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "764",
+        "iso3_alpha": "THA",
+        "country_name": "Thailand",
+        "total_workforce_M": 38.0,
+        "tier1_jobs_M": 10.602,
+        "tier2_jobs_M": 2.09,
+        "tier3_jobs_M": 0.608,
+        "tier1_pct_of_workforce": 27.9,
+        "tier2_pct_of_workforce": 5.5,
+        "tier3_pct_of_workforce": 1.6,
+        "tier3_share_of_computer_users_pct": 4.6,
+        "confidence": "Model",
+        "source_notes": "NIDA, ITU 2023"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "458",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "458",
+        "iso3_alpha": "MYS",
+        "country_name": "Malaysia",
+        "total_workforce_M": 16.0,
+        "tier1_jobs_M": 6.64,
+        "tier2_jobs_M": 1.2,
+        "tier3_jobs_M": 0.48,
+        "tier1_pct_of_workforce": 41.5,
+        "tier2_pct_of_workforce": 7.5,
+        "tier3_pct_of_workforce": 3.0,
+        "tier3_share_of_computer_users_pct": 5.8,
+        "confidence": "Direct",
+        "source_notes": "DOSM, ITU 2023"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "566",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "566",
+        "iso3_alpha": "NGA",
+        "country_name": "Nigeria",
+        "total_workforce_M": 67.0,
+        "tier1_jobs_M": 7.638,
+        "tier2_jobs_M": 2.01,
+        "tier3_jobs_M": 0.402,
+        "tier1_pct_of_workforce": 11.4,
+        "tier2_pct_of_workforce": 3.0,
+        "tier3_pct_of_workforce": 0.6,
+        "tier3_share_of_computer_users_pct": 4.0,
+        "confidence": "Model",
+        "source_notes": "NBS Nigeria, ITU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "404",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "404",
+        "iso3_alpha": "KEN",
+        "country_name": "Kenya",
+        "total_workforce_M": 21.0,
+        "tier1_jobs_M": 2.898,
+        "tier2_jobs_M": 0.735,
+        "tier3_jobs_M": 0.147,
+        "tier1_pct_of_workforce": 13.8,
+        "tier2_pct_of_workforce": 3.5,
+        "tier3_pct_of_workforce": 0.7,
+        "tier3_share_of_computer_users_pct": 3.9,
+        "confidence": "Model",
+        "source_notes": "KNBS, ITU 2023"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "012",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "012",
+        "iso3_alpha": "DZA",
+        "country_name": "Algeria",
+        "total_workforce_M": 12.0,
+        "tier1_jobs_M": 2.352,
+        "tier2_jobs_M": 0.54,
+        "tier3_jobs_M": 0.108,
+        "tier1_pct_of_workforce": 19.6,
+        "tier2_pct_of_workforce": 4.5,
+        "tier3_pct_of_workforce": 0.9,
+        "tier3_share_of_computer_users_pct": 3.6,
+        "confidence": "Model",
+        "source_notes": "ONS Algeria, ITU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "682",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "682",
+        "iso3_alpha": "SAU",
+        "country_name": "Saudi Arabia",
+        "total_workforce_M": 14.0,
+        "tier1_jobs_M": 6.132,
+        "tier2_jobs_M": 1.12,
+        "tier3_jobs_M": 0.448,
+        "tier1_pct_of_workforce": 43.8,
+        "tier2_pct_of_workforce": 8.0,
+        "tier3_pct_of_workforce": 3.2,
+        "tier3_share_of_computer_users_pct": 5.8,
+        "confidence": "Direct",
+        "source_notes": "MCIT KSA 2023"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "784",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "784",
+        "iso3_alpha": "ARE",
+        "country_name": "UAE",
+        "total_workforce_M": 5.9,
+        "tier1_jobs_M": 3.239,
+        "tier2_jobs_M": 0.531,
+        "tier3_jobs_M": 0.242,
+        "tier1_pct_of_workforce": 54.9,
+        "tier2_pct_of_workforce": 9.0,
+        "tier3_pct_of_workforce": 4.1,
+        "tier3_share_of_computer_users_pct": 6.0,
+        "confidence": "Direct",
+        "source_notes": "TRA UAE 2023"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "643",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "643",
+        "iso3_alpha": "RUS",
+        "country_name": "Russia",
+        "total_workforce_M": 73.0,
+        "tier1_jobs_M": 33.58,
+        "tier2_jobs_M": 6.205,
+        "tier3_jobs_M": 2.555,
+        "tier1_pct_of_workforce": 46.0,
+        "tier2_pct_of_workforce": 8.5,
+        "tier3_pct_of_workforce": 3.5,
+        "tier3_share_of_computer_users_pct": 6.0,
+        "confidence": "Direct",
+        "source_notes": "HSE Russia 2023"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "792",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "792",
+        "iso3_alpha": "TUR",
+        "country_name": "Turkey",
+        "total_workforce_M": 32.0,
+        "tier1_jobs_M": 12.224,
+        "tier2_jobs_M": 2.24,
+        "tier3_jobs_M": 0.896,
+        "tier1_pct_of_workforce": 38.2,
+        "tier2_pct_of_workforce": 7.0,
+        "tier3_pct_of_workforce": 2.8,
+        "tier3_share_of_computer_users_pct": 5.8,
+        "confidence": "Direct",
+        "source_notes": "Eurostat assoc, ITU"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "586",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "586",
+        "iso3_alpha": "PAK",
+        "country_name": "Pakistan",
+        "total_workforce_M": 72.0,
+        "tier1_jobs_M": 6.48,
+        "tier2_jobs_M": 1.8,
+        "tier3_jobs_M": 0.36,
+        "tier1_pct_of_workforce": 9.0,
+        "tier2_pct_of_workforce": 2.5,
+        "tier3_pct_of_workforce": 0.5,
+        "tier3_share_of_computer_users_pct": 4.2,
+        "confidence": "Model",
+        "source_notes": "PBS, ITU 2023"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "040",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "040",
+        "iso3_alpha": "AUT",
+        "country_name": "Austria",
+        "total_workforce_M": 4.9,
+        "tier1_jobs_M": 3.405,
+        "tier2_jobs_M": 0.466,
+        "tier3_jobs_M": 0.245,
+        "tier1_pct_of_workforce": 69.5,
+        "tier2_pct_of_workforce": 9.5,
+        "tier3_pct_of_workforce": 5.0,
+        "tier3_share_of_computer_users_pct": 6.0,
+        "confidence": "Model (high-income)",
+        "source_notes": "ITU/Eurostat proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "056",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "056",
+        "iso3_alpha": "BEL",
+        "country_name": "Belgium",
+        "total_workforce_M": 5.1,
+        "tier1_jobs_M": 3.636,
+        "tier2_jobs_M": 0.484,
+        "tier3_jobs_M": 0.265,
+        "tier1_pct_of_workforce": 71.3,
+        "tier2_pct_of_workforce": 9.5,
+        "tier3_pct_of_workforce": 5.2,
+        "tier3_share_of_computer_users_pct": 6.0,
+        "confidence": "Model (high-income)",
+        "source_notes": "ITU/Eurostat proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "100",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "100",
+        "iso3_alpha": "BGR",
+        "country_name": "Bulgaria",
+        "total_workforce_M": 3.0,
+        "tier1_jobs_M": 1.611,
+        "tier2_jobs_M": 0.255,
+        "tier3_jobs_M": 0.114,
+        "tier1_pct_of_workforce": 53.7,
+        "tier2_pct_of_workforce": 8.5,
+        "tier3_pct_of_workforce": 3.8,
+        "tier3_share_of_computer_users_pct": 5.8,
+        "confidence": "Model (upper-mid)",
+        "source_notes": "ITU/Eurostat proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "191",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "191",
+        "iso3_alpha": "HRV",
+        "country_name": "Croatia",
+        "total_workforce_M": 1.9,
+        "tier1_jobs_M": 1.153,
+        "tier2_jobs_M": 0.171,
+        "tier3_jobs_M": 0.082,
+        "tier1_pct_of_workforce": 60.7,
+        "tier2_pct_of_workforce": 9.0,
+        "tier3_pct_of_workforce": 4.3,
+        "tier3_share_of_computer_users_pct": 5.8,
+        "confidence": "Model (high-income)",
+        "source_notes": "ITU/Eurostat proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "196",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "196",
+        "iso3_alpha": "CYP",
+        "country_name": "Cyprus",
+        "total_workforce_M": 0.5,
+        "tier1_jobs_M": 0.329,
+        "tier2_jobs_M": 0.048,
+        "tier3_jobs_M": 0.024,
+        "tier1_pct_of_workforce": 65.7,
+        "tier2_pct_of_workforce": 9.5,
+        "tier3_pct_of_workforce": 4.8,
+        "tier3_share_of_computer_users_pct": 6.0,
+        "confidence": "Model (high-income)",
+        "source_notes": "ITU/Eurostat proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "203",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "203",
+        "iso3_alpha": "CZE",
+        "country_name": "Czechia",
+        "total_workforce_M": 5.5,
+        "tier1_jobs_M": 3.619,
+        "tier2_jobs_M": 0.522,
+        "tier3_jobs_M": 0.259,
+        "tier1_pct_of_workforce": 65.8,
+        "tier2_pct_of_workforce": 9.5,
+        "tier3_pct_of_workforce": 4.7,
+        "tier3_share_of_computer_users_pct": 5.9,
+        "confidence": "Model (high-income)",
+        "source_notes": "ITU/Eurostat proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "208",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "208",
+        "iso3_alpha": "DNK",
+        "country_name": "Denmark",
+        "total_workforce_M": 3.0,
+        "tier1_jobs_M": 2.175,
+        "tier2_jobs_M": 0.33,
+        "tier3_jobs_M": 0.195,
+        "tier1_pct_of_workforce": 72.5,
+        "tier2_pct_of_workforce": 11.0,
+        "tier3_pct_of_workforce": 6.5,
+        "tier3_share_of_computer_users_pct": 7.2,
+        "confidence": "Model (high-income)",
+        "source_notes": "ITU/Eurostat proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "348",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "348",
+        "iso3_alpha": "HUN",
+        "country_name": "Hungary",
+        "total_workforce_M": 4.7,
+        "tier1_jobs_M": 2.956,
+        "tier2_jobs_M": 0.423,
+        "tier3_jobs_M": 0.193,
+        "tier1_pct_of_workforce": 62.9,
+        "tier2_pct_of_workforce": 9.0,
+        "tier3_pct_of_workforce": 4.1,
+        "tier3_share_of_computer_users_pct": 5.4,
+        "confidence": "Model (high-income)",
+        "source_notes": "ITU/Eurostat proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "428",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "428",
+        "iso3_alpha": "LVA",
+        "country_name": "Latvia",
+        "total_workforce_M": 0.9,
+        "tier1_jobs_M": 0.572,
+        "tier2_jobs_M": 0.086,
+        "tier3_jobs_M": 0.045,
+        "tier1_pct_of_workforce": 63.5,
+        "tier2_pct_of_workforce": 9.5,
+        "tier3_pct_of_workforce": 5.0,
+        "tier3_share_of_computer_users_pct": 6.4,
+        "confidence": "Model (high-income)",
+        "source_notes": "ITU/Eurostat proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "440",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "440",
+        "iso3_alpha": "LTU",
+        "country_name": "Lithuania",
+        "total_workforce_M": 1.4,
+        "tier1_jobs_M": 0.847,
+        "tier2_jobs_M": 0.126,
+        "tier3_jobs_M": 0.063,
+        "tier1_pct_of_workforce": 60.5,
+        "tier2_pct_of_workforce": 9.0,
+        "tier3_pct_of_workforce": 4.5,
+        "tier3_share_of_computer_users_pct": 6.1,
+        "confidence": "Model (high-income)",
+        "source_notes": "ITU/Eurostat proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "442",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "442",
+        "iso3_alpha": "LUX",
+        "country_name": "Luxembourg",
+        "total_workforce_M": 0.3,
+        "tier1_jobs_M": 0.219,
+        "tier2_jobs_M": 0.033,
+        "tier3_jobs_M": 0.018,
+        "tier1_pct_of_workforce": 73.0,
+        "tier2_pct_of_workforce": 11.0,
+        "tier3_pct_of_workforce": 6.0,
+        "tier3_share_of_computer_users_pct": 6.7,
+        "confidence": "Model (high-income)",
+        "source_notes": "ITU/Eurostat proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "470",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "470",
+        "iso3_alpha": "MLT",
+        "country_name": "Malta",
+        "total_workforce_M": 0.3,
+        "tier1_jobs_M": 0.203,
+        "tier2_jobs_M": 0.029,
+        "tier3_jobs_M": 0.015,
+        "tier1_pct_of_workforce": 67.5,
+        "tier2_pct_of_workforce": 9.5,
+        "tier3_pct_of_workforce": 5.0,
+        "tier3_share_of_computer_users_pct": 6.1,
+        "confidence": "Model (high-income)",
+        "source_notes": "ITU/Eurostat proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "620",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "620",
+        "iso3_alpha": "PRT",
+        "country_name": "Portugal",
+        "total_workforce_M": 5.1,
+        "tier1_jobs_M": 3.101,
+        "tier2_jobs_M": 0.459,
+        "tier3_jobs_M": 0.214,
+        "tier1_pct_of_workforce": 60.8,
+        "tier2_pct_of_workforce": 9.0,
+        "tier3_pct_of_workforce": 4.2,
+        "tier3_share_of_computer_users_pct": 5.7,
+        "confidence": "Model (upper-mid)",
+        "source_notes": "ITU/Eurostat proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "642",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "642",
+        "iso3_alpha": "ROU",
+        "country_name": "Romania",
+        "total_workforce_M": 8.8,
+        "tier1_jobs_M": 4.444,
+        "tier2_jobs_M": 0.704,
+        "tier3_jobs_M": 0.308,
+        "tier1_pct_of_workforce": 50.5,
+        "tier2_pct_of_workforce": 8.0,
+        "tier3_pct_of_workforce": 3.5,
+        "tier3_share_of_computer_users_pct": 5.6,
+        "confidence": "Model (upper-mid)",
+        "source_notes": "ITU/Eurostat proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "703",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "703",
+        "iso3_alpha": "SVK",
+        "country_name": "Slovakia",
+        "total_workforce_M": 2.8,
+        "tier1_jobs_M": 1.848,
+        "tier2_jobs_M": 0.266,
+        "tier3_jobs_M": 0.126,
+        "tier1_pct_of_workforce": 66.0,
+        "tier2_pct_of_workforce": 9.5,
+        "tier3_pct_of_workforce": 4.5,
+        "tier3_share_of_computer_users_pct": 5.6,
+        "confidence": "Model (high-income)",
+        "source_notes": "ITU/Eurostat proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "705",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "705",
+        "iso3_alpha": "SVN",
+        "country_name": "Slovenia",
+        "total_workforce_M": 1.1,
+        "tier1_jobs_M": 0.701,
+        "tier2_jobs_M": 0.105,
+        "tier3_jobs_M": 0.053,
+        "tier1_pct_of_workforce": 63.7,
+        "tier2_pct_of_workforce": 9.5,
+        "tier3_pct_of_workforce": 4.8,
+        "tier3_share_of_computer_users_pct": 6.2,
+        "confidence": "Model (high-income)",
+        "source_notes": "ITU/Eurostat proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "578",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "578",
+        "iso3_alpha": "NOR",
+        "country_name": "Norway",
+        "total_workforce_M": 2.9,
+        "tier1_jobs_M": 2.146,
+        "tier2_jobs_M": 0.319,
+        "tier3_jobs_M": 0.203,
+        "tier1_pct_of_workforce": 74.0,
+        "tier2_pct_of_workforce": 11.0,
+        "tier3_pct_of_workforce": 7.0,
+        "tier3_share_of_computer_users_pct": 7.6,
+        "confidence": "Model (high-income)",
+        "source_notes": "ITU/Eurostat proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "756",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "756",
+        "iso3_alpha": "CHE",
+        "country_name": "Switzerland",
+        "total_workforce_M": 5.3,
+        "tier1_jobs_M": 3.858,
+        "tier2_jobs_M": 0.583,
+        "tier3_jobs_M": 0.329,
+        "tier1_pct_of_workforce": 72.8,
+        "tier2_pct_of_workforce": 11.0,
+        "tier3_pct_of_workforce": 6.2,
+        "tier3_share_of_computer_users_pct": 6.9,
+        "confidence": "Model (high-income)",
+        "source_notes": "ITU/Eurostat proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "300",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "300",
+        "iso3_alpha": "GRC",
+        "country_name": "Greece",
+        "total_workforce_M": 4.2,
+        "tier1_jobs_M": 2.339,
+        "tier2_jobs_M": 0.357,
+        "tier3_jobs_M": 0.16,
+        "tier1_pct_of_workforce": 55.7,
+        "tier2_pct_of_workforce": 8.5,
+        "tier3_pct_of_workforce": 3.8,
+        "tier3_share_of_computer_users_pct": 5.6,
+        "confidence": "Model (upper-mid)",
+        "source_notes": "ITU/Eurostat proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "112",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "112",
+        "iso3_alpha": "BLR",
+        "country_name": "Belarus",
+        "total_workforce_M": 4.6,
+        "tier1_jobs_M": 2.576,
+        "tier2_jobs_M": 0.391,
+        "tier3_jobs_M": 0.161,
+        "tier1_pct_of_workforce": 56.0,
+        "tier2_pct_of_workforce": 8.5,
+        "tier3_pct_of_workforce": 3.5,
+        "tier3_share_of_computer_users_pct": 5.1,
+        "confidence": "Model (upper-mid)",
+        "source_notes": "ITU/ECA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "804",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "804",
+        "iso3_alpha": "UKR",
+        "country_name": "Ukraine",
+        "total_workforce_M": 17.0,
+        "tier1_jobs_M": 8.636,
+        "tier2_jobs_M": 1.36,
+        "tier3_jobs_M": 0.544,
+        "tier1_pct_of_workforce": 50.8,
+        "tier2_pct_of_workforce": 8.0,
+        "tier3_pct_of_workforce": 3.2,
+        "tier3_share_of_computer_users_pct": 5.2,
+        "confidence": "Model (upper-mid)",
+        "source_notes": "ITU/ECA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "498",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "498",
+        "iso3_alpha": "MDA",
+        "country_name": "Moldova",
+        "total_workforce_M": 1.5,
+        "tier1_jobs_M": 0.675,
+        "tier2_jobs_M": 0.113,
+        "tier3_jobs_M": 0.037,
+        "tier1_pct_of_workforce": 45.0,
+        "tier2_pct_of_workforce": 7.5,
+        "tier3_pct_of_workforce": 2.5,
+        "tier3_share_of_computer_users_pct": 4.5,
+        "confidence": "Model (upper-mid)",
+        "source_notes": "ITU/ECA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "688",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "688",
+        "iso3_alpha": "SRB",
+        "country_name": "Serbia",
+        "total_workforce_M": 3.1,
+        "tier1_jobs_M": 1.674,
+        "tier2_jobs_M": 0.264,
+        "tier3_jobs_M": 0.108,
+        "tier1_pct_of_workforce": 54.0,
+        "tier2_pct_of_workforce": 8.5,
+        "tier3_pct_of_workforce": 3.5,
+        "tier3_share_of_computer_users_pct": 5.3,
+        "confidence": "Model (upper-mid)",
+        "source_notes": "ITU/Eurostat proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "807",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "807",
+        "iso3_alpha": "MKD",
+        "country_name": "North Macedonia",
+        "total_workforce_M": 1.0,
+        "tier1_jobs_M": 0.488,
+        "tier2_jobs_M": 0.08,
+        "tier3_jobs_M": 0.032,
+        "tier1_pct_of_workforce": 48.8,
+        "tier2_pct_of_workforce": 8.0,
+        "tier3_pct_of_workforce": 3.2,
+        "tier3_share_of_computer_users_pct": 5.3,
+        "confidence": "Model (upper-mid)",
+        "source_notes": "ITU/Eurostat proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "008",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "008",
+        "iso3_alpha": "ALB",
+        "country_name": "Albania",
+        "total_workforce_M": 1.4,
+        "tier1_jobs_M": 0.721,
+        "tier2_jobs_M": 0.105,
+        "tier3_jobs_M": 0.042,
+        "tier1_pct_of_workforce": 51.5,
+        "tier2_pct_of_workforce": 7.5,
+        "tier3_pct_of_workforce": 3.0,
+        "tier3_share_of_computer_users_pct": 4.8,
+        "confidence": "Model (upper-mid)",
+        "source_notes": "ITU/Eurostat proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "070",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "070",
+        "iso3_alpha": "BIH",
+        "country_name": "Bosnia & Herz.",
+        "total_workforce_M": 1.3,
+        "tier1_jobs_M": 0.669,
+        "tier2_jobs_M": 0.098,
+        "tier3_jobs_M": 0.039,
+        "tier1_pct_of_workforce": 51.5,
+        "tier2_pct_of_workforce": 7.5,
+        "tier3_pct_of_workforce": 3.0,
+        "tier3_share_of_computer_users_pct": 4.8,
+        "confidence": "Model (upper-mid)",
+        "source_notes": "ITU/Eurostat proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "499",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "499",
+        "iso3_alpha": "MNE",
+        "country_name": "Montenegro",
+        "total_workforce_M": 0.25,
+        "tier1_jobs_M": 0.132,
+        "tier2_jobs_M": 0.02,
+        "tier3_jobs_M": 0.008,
+        "tier1_pct_of_workforce": 52.8,
+        "tier2_pct_of_workforce": 8.0,
+        "tier3_pct_of_workforce": 3.2,
+        "tier3_share_of_computer_users_pct": 5.0,
+        "confidence": "Model (upper-mid)",
+        "source_notes": "ITU/Eurostat proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "032",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "032",
+        "iso3_alpha": "ARG",
+        "country_name": "Argentina",
+        "total_workforce_M": 20.0,
+        "tier1_jobs_M": 12.14,
+        "tier2_jobs_M": 1.7,
+        "tier3_jobs_M": 0.56,
+        "tier1_pct_of_workforce": 60.7,
+        "tier2_pct_of_workforce": 8.5,
+        "tier3_pct_of_workforce": 2.8,
+        "tier3_share_of_computer_users_pct": 3.9,
+        "confidence": "Model (upper-mid)",
+        "source_notes": "ITU/LAC proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "152",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "152",
+        "iso3_alpha": "CHL",
+        "country_name": "Chile",
+        "total_workforce_M": 10.0,
+        "tier1_jobs_M": 6.3,
+        "tier2_jobs_M": 0.9,
+        "tier3_jobs_M": 0.3,
+        "tier1_pct_of_workforce": 63.0,
+        "tier2_pct_of_workforce": 9.0,
+        "tier3_pct_of_workforce": 3.0,
+        "tier3_share_of_computer_users_pct": 4.0,
+        "confidence": "Model (upper-mid)",
+        "source_notes": "ITU/LAC proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "170",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "170",
+        "iso3_alpha": "COL",
+        "country_name": "Colombia",
+        "total_workforce_M": 22.0,
+        "tier1_jobs_M": 9.9,
+        "tier2_jobs_M": 1.54,
+        "tier3_jobs_M": 0.44,
+        "tier1_pct_of_workforce": 45.0,
+        "tier2_pct_of_workforce": 7.0,
+        "tier3_pct_of_workforce": 2.0,
+        "tier3_share_of_computer_users_pct": 3.7,
+        "confidence": "Model (upper-mid)",
+        "source_notes": "ITU/LAC proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "604",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "604",
+        "iso3_alpha": "PER",
+        "country_name": "Peru",
+        "total_workforce_M": 17.0,
+        "tier1_jobs_M": 7.854,
+        "tier2_jobs_M": 1.19,
+        "tier3_jobs_M": 0.306,
+        "tier1_pct_of_workforce": 46.2,
+        "tier2_pct_of_workforce": 7.0,
+        "tier3_pct_of_workforce": 1.8,
+        "tier3_share_of_computer_users_pct": 3.3,
+        "confidence": "Model (upper-mid)",
+        "source_notes": "ITU/LAC proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "218",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "218",
+        "iso3_alpha": "ECU",
+        "country_name": "Ecuador",
+        "total_workforce_M": 8.0,
+        "tier1_jobs_M": 3.344,
+        "tier2_jobs_M": 0.52,
+        "tier3_jobs_M": 0.136,
+        "tier1_pct_of_workforce": 41.8,
+        "tier2_pct_of_workforce": 6.5,
+        "tier3_pct_of_workforce": 1.7,
+        "tier3_share_of_computer_users_pct": 3.4,
+        "confidence": "Model (upper-mid)",
+        "source_notes": "ITU/LAC proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "068",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "068",
+        "iso3_alpha": "BOL",
+        "country_name": "Bolivia",
+        "total_workforce_M": 5.5,
+        "tier1_jobs_M": 1.722,
+        "tier2_jobs_M": 0.302,
+        "tier3_jobs_M": 0.066,
+        "tier1_pct_of_workforce": 31.3,
+        "tier2_pct_of_workforce": 5.5,
+        "tier3_pct_of_workforce": 1.2,
+        "tier3_share_of_computer_users_pct": 3.2,
+        "confidence": "Model (lower-mid)",
+        "source_notes": "ITU/LAC proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "600",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "600",
+        "iso3_alpha": "PRY",
+        "country_name": "Paraguay",
+        "total_workforce_M": 3.5,
+        "tier1_jobs_M": 1.627,
+        "tier2_jobs_M": 0.245,
+        "tier3_jobs_M": 0.052,
+        "tier1_pct_of_workforce": 46.5,
+        "tier2_pct_of_workforce": 7.0,
+        "tier3_pct_of_workforce": 1.5,
+        "tier3_share_of_computer_users_pct": 2.7,
+        "confidence": "Model (upper-mid)",
+        "source_notes": "ITU/LAC proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "858",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "858",
+        "iso3_alpha": "URY",
+        "country_name": "Uruguay",
+        "total_workforce_M": 1.7,
+        "tier1_jobs_M": 1.057,
+        "tier2_jobs_M": 0.153,
+        "tier3_jobs_M": 0.048,
+        "tier1_pct_of_workforce": 62.2,
+        "tier2_pct_of_workforce": 9.0,
+        "tier3_pct_of_workforce": 2.8,
+        "tier3_share_of_computer_users_pct": 3.8,
+        "confidence": "Model (high-income)",
+        "source_notes": "ITU/LAC proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "862",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "862",
+        "iso3_alpha": "VEN",
+        "country_name": "Venezuela",
+        "total_workforce_M": 14.0,
+        "tier1_jobs_M": 4.34,
+        "tier2_jobs_M": 0.77,
+        "tier3_jobs_M": 0.21,
+        "tier1_pct_of_workforce": 31.0,
+        "tier2_pct_of_workforce": 5.5,
+        "tier3_pct_of_workforce": 1.5,
+        "tier3_share_of_computer_users_pct": 3.9,
+        "confidence": "Model (upper-mid)",
+        "source_notes": "ITU/LAC proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "340",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "340",
+        "iso3_alpha": "HND",
+        "country_name": "Honduras",
+        "total_workforce_M": 4.0,
+        "tier1_jobs_M": 0.984,
+        "tier2_jobs_M": 0.18,
+        "tier3_jobs_M": 0.036,
+        "tier1_pct_of_workforce": 24.6,
+        "tier2_pct_of_workforce": 4.5,
+        "tier3_pct_of_workforce": 0.9,
+        "tier3_share_of_computer_users_pct": 3.0,
+        "confidence": "Model (lower-mid)",
+        "source_notes": "ITU/LAC proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "222",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "222",
+        "iso3_alpha": "SLV",
+        "country_name": "El Salvador",
+        "total_workforce_M": 3.0,
+        "tier1_jobs_M": 0.957,
+        "tier2_jobs_M": 0.15,
+        "tier3_jobs_M": 0.033,
+        "tier1_pct_of_workforce": 31.9,
+        "tier2_pct_of_workforce": 5.0,
+        "tier3_pct_of_workforce": 1.1,
+        "tier3_share_of_computer_users_pct": 2.9,
+        "confidence": "Model (lower-mid)",
+        "source_notes": "ITU/LAC proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "320",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "320",
+        "iso3_alpha": "GTM",
+        "country_name": "Guatemala",
+        "total_workforce_M": 7.0,
+        "tier1_jobs_M": 2.1,
+        "tier2_jobs_M": 0.35,
+        "tier3_jobs_M": 0.07,
+        "tier1_pct_of_workforce": 30.0,
+        "tier2_pct_of_workforce": 5.0,
+        "tier3_pct_of_workforce": 1.0,
+        "tier3_share_of_computer_users_pct": 2.8,
+        "confidence": "Model (lower-mid)",
+        "source_notes": "ITU/LAC proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "332",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "332",
+        "iso3_alpha": "HTI",
+        "country_name": "Haiti",
+        "total_workforce_M": 4.5,
+        "tier1_jobs_M": 0.81,
+        "tier2_jobs_M": 0.158,
+        "tier3_jobs_M": 0.022,
+        "tier1_pct_of_workforce": 18.0,
+        "tier2_pct_of_workforce": 3.5,
+        "tier3_pct_of_workforce": 0.5,
+        "tier3_share_of_computer_users_pct": 2.3,
+        "confidence": "Model (lower-mid)",
+        "source_notes": "ITU/LAC proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "192",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "192",
+        "iso3_alpha": "CUB",
+        "country_name": "Cuba",
+        "total_workforce_M": 5.5,
+        "tier1_jobs_M": 2.502,
+        "tier2_jobs_M": 0.412,
+        "tier3_jobs_M": 0.11,
+        "tier1_pct_of_workforce": 45.5,
+        "tier2_pct_of_workforce": 7.5,
+        "tier3_pct_of_workforce": 2.0,
+        "tier3_share_of_computer_users_pct": 3.6,
+        "confidence": "Model (upper-mid)",
+        "source_notes": "ITU/LAC proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "388",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "388",
+        "iso3_alpha": "JAM",
+        "country_name": "Jamaica",
+        "total_workforce_M": 1.4,
+        "tier1_jobs_M": 0.767,
+        "tier2_jobs_M": 0.112,
+        "tier3_jobs_M": 0.031,
+        "tier1_pct_of_workforce": 54.8,
+        "tier2_pct_of_workforce": 8.0,
+        "tier3_pct_of_workforce": 2.2,
+        "tier3_share_of_computer_users_pct": 3.4,
+        "confidence": "Model (upper-mid)",
+        "source_notes": "ITU/LAC proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "214",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "214",
+        "iso3_alpha": "DOM",
+        "country_name": "Dominican Rep.",
+        "total_workforce_M": 5.2,
+        "tier1_jobs_M": 2.08,
+        "tier2_jobs_M": 0.338,
+        "tier3_jobs_M": 0.078,
+        "tier1_pct_of_workforce": 40.0,
+        "tier2_pct_of_workforce": 6.5,
+        "tier3_pct_of_workforce": 1.5,
+        "tier3_share_of_computer_users_pct": 3.1,
+        "confidence": "Model (upper-mid)",
+        "source_notes": "ITU/LAC proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "188",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "188",
+        "iso3_alpha": "CRI",
+        "country_name": "Costa Rica",
+        "total_workforce_M": 2.4,
+        "tier1_jobs_M": 1.32,
+        "tier2_jobs_M": 0.204,
+        "tier3_jobs_M": 0.06,
+        "tier1_pct_of_workforce": 55.0,
+        "tier2_pct_of_workforce": 8.5,
+        "tier3_pct_of_workforce": 2.5,
+        "tier3_share_of_computer_users_pct": 3.8,
+        "confidence": "Model (upper-mid)",
+        "source_notes": "ITU/LAC proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "591",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "591",
+        "iso3_alpha": "PAN",
+        "country_name": "Panama",
+        "total_workforce_M": 2.1,
+        "tier1_jobs_M": 0.945,
+        "tier2_jobs_M": 0.147,
+        "tier3_jobs_M": 0.042,
+        "tier1_pct_of_workforce": 45.0,
+        "tier2_pct_of_workforce": 7.0,
+        "tier3_pct_of_workforce": 2.0,
+        "tier3_share_of_computer_users_pct": 3.7,
+        "confidence": "Model (upper-mid)",
+        "source_notes": "ITU/LAC proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "050",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "050",
+        "iso3_alpha": "BGD",
+        "country_name": "Bangladesh",
+        "total_workforce_M": 69.0,
+        "tier1_jobs_M": 15.939,
+        "tier2_jobs_M": 2.76,
+        "tier3_jobs_M": 0.621,
+        "tier1_pct_of_workforce": 23.1,
+        "tier2_pct_of_workforce": 4.0,
+        "tier3_pct_of_workforce": 0.9,
+        "tier3_share_of_computer_users_pct": 3.2,
+        "confidence": "Model (lower-mid)",
+        "source_notes": "ITU/SA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "144",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "144",
+        "iso3_alpha": "LKA",
+        "country_name": "Sri Lanka",
+        "total_workforce_M": 10.0,
+        "tier1_jobs_M": 3.31,
+        "tier2_jobs_M": 0.55,
+        "tier3_jobs_M": 0.14,
+        "tier1_pct_of_workforce": 33.1,
+        "tier2_pct_of_workforce": 5.5,
+        "tier3_pct_of_workforce": 1.4,
+        "tier3_share_of_computer_users_pct": 3.5,
+        "confidence": "Model (lower-mid)",
+        "source_notes": "ITU/SA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "524",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "524",
+        "iso3_alpha": "NPL",
+        "country_name": "Nepal",
+        "total_workforce_M": 16.0,
+        "tier1_jobs_M": 4.032,
+        "tier2_jobs_M": 0.64,
+        "tier3_jobs_M": 0.128,
+        "tier1_pct_of_workforce": 25.2,
+        "tier2_pct_of_workforce": 4.0,
+        "tier3_pct_of_workforce": 0.8,
+        "tier3_share_of_computer_users_pct": 2.7,
+        "confidence": "Model (lower-mid)",
+        "source_notes": "ITU/SA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "104",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "104",
+        "iso3_alpha": "MMR",
+        "country_name": "Myanmar",
+        "total_workforce_M": 25.0,
+        "tier1_jobs_M": 4.45,
+        "tier2_jobs_M": 0.875,
+        "tier3_jobs_M": 0.175,
+        "tier1_pct_of_workforce": 17.8,
+        "tier2_pct_of_workforce": 3.5,
+        "tier3_pct_of_workforce": 0.7,
+        "tier3_share_of_computer_users_pct": 3.2,
+        "confidence": "Model (lower-mid)",
+        "source_notes": "ITU/SA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "116",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "116",
+        "iso3_alpha": "KHM",
+        "country_name": "Cambodia",
+        "total_workforce_M": 9.0,
+        "tier1_jobs_M": 2.394,
+        "tier2_jobs_M": 0.405,
+        "tier3_jobs_M": 0.081,
+        "tier1_pct_of_workforce": 26.6,
+        "tier2_pct_of_workforce": 4.5,
+        "tier3_pct_of_workforce": 0.9,
+        "tier3_share_of_computer_users_pct": 2.8,
+        "confidence": "Model (lower-mid)",
+        "source_notes": "ITU/SA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "418",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "418",
+        "iso3_alpha": "LAO",
+        "country_name": "Laos",
+        "total_workforce_M": 3.8,
+        "tier1_jobs_M": 0.882,
+        "tier2_jobs_M": 0.152,
+        "tier3_jobs_M": 0.03,
+        "tier1_pct_of_workforce": 23.2,
+        "tier2_pct_of_workforce": 4.0,
+        "tier3_pct_of_workforce": 0.8,
+        "tier3_share_of_computer_users_pct": 2.9,
+        "confidence": "Model (lower-mid)",
+        "source_notes": "ITU/SA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "004",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "004",
+        "iso3_alpha": "AFG",
+        "country_name": "Afghanistan",
+        "total_workforce_M": 10.0,
+        "tier1_jobs_M": 0.91,
+        "tier2_jobs_M": 0.25,
+        "tier3_jobs_M": 0.04,
+        "tier1_pct_of_workforce": 9.1,
+        "tier2_pct_of_workforce": 2.5,
+        "tier3_pct_of_workforce": 0.4,
+        "tier3_share_of_computer_users_pct": 3.3,
+        "confidence": "Model (low)",
+        "source_notes": "ITU/SA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "554",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "554",
+        "iso3_alpha": "NZL",
+        "country_name": "New Zealand",
+        "total_workforce_M": 2.8,
+        "tier1_jobs_M": 1.946,
+        "tier2_jobs_M": 0.266,
+        "tier3_jobs_M": 0.14,
+        "tier1_pct_of_workforce": 69.5,
+        "tier2_pct_of_workforce": 9.5,
+        "tier3_pct_of_workforce": 5.0,
+        "tier3_share_of_computer_users_pct": 6.0,
+        "confidence": "Model (high-income)",
+        "source_notes": "ITU proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "344",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "344",
+        "iso3_alpha": "HKG",
+        "country_name": "Hong Kong",
+        "total_workforce_M": 4.0,
+        "tier1_jobs_M": 2.84,
+        "tier2_jobs_M": 0.42,
+        "tier3_jobs_M": 0.26,
+        "tier1_pct_of_workforce": 71.0,
+        "tier2_pct_of_workforce": 10.5,
+        "tier3_pct_of_workforce": 6.5,
+        "tier3_share_of_computer_users_pct": 7.4,
+        "confidence": "Model (high-income)",
+        "source_notes": "CSD HK proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "158",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "158",
+        "iso3_alpha": "TWN",
+        "country_name": "Taiwan",
+        "total_workforce_M": 11.6,
+        "tier1_jobs_M": 7.714,
+        "tier2_jobs_M": 1.16,
+        "tier3_jobs_M": 0.638,
+        "tier1_pct_of_workforce": 66.5,
+        "tier2_pct_of_workforce": 10.0,
+        "tier3_pct_of_workforce": 5.5,
+        "tier3_share_of_computer_users_pct": 6.7,
+        "confidence": "Model (high-income)",
+        "source_notes": "DGBAS proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "398",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "398",
+        "iso3_alpha": "KAZ",
+        "country_name": "Kazakhstan",
+        "total_workforce_M": 10.0,
+        "tier1_jobs_M": 5.32,
+        "tier2_jobs_M": 0.8,
+        "tier3_jobs_M": 0.28,
+        "tier1_pct_of_workforce": 53.2,
+        "tier2_pct_of_workforce": 8.0,
+        "tier3_pct_of_workforce": 2.8,
+        "tier3_share_of_computer_users_pct": 4.4,
+        "confidence": "Model (upper-mid)",
+        "source_notes": "ITU/ECA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "860",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "860",
+        "iso3_alpha": "UZB",
+        "country_name": "Uzbekistan",
+        "total_workforce_M": 15.0,
+        "tier1_jobs_M": 5.43,
+        "tier2_jobs_M": 0.9,
+        "tier3_jobs_M": 0.27,
+        "tier1_pct_of_workforce": 36.2,
+        "tier2_pct_of_workforce": 6.0,
+        "tier3_pct_of_workforce": 1.8,
+        "tier3_share_of_computer_users_pct": 4.1,
+        "confidence": "Model (lower-mid)",
+        "source_notes": "ITU/ECA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "417",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "417",
+        "iso3_alpha": "KGZ",
+        "country_name": "Kyrgyzstan",
+        "total_workforce_M": 3.0,
+        "tier1_jobs_M": 0.891,
+        "tier2_jobs_M": 0.15,
+        "tier3_jobs_M": 0.039,
+        "tier1_pct_of_workforce": 29.7,
+        "tier2_pct_of_workforce": 5.0,
+        "tier3_pct_of_workforce": 1.3,
+        "tier3_share_of_computer_users_pct": 3.6,
+        "confidence": "Model (lower-mid)",
+        "source_notes": "ITU/ECA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "762",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "762",
+        "iso3_alpha": "TJK",
+        "country_name": "Tajikistan",
+        "total_workforce_M": 4.0,
+        "tier1_jobs_M": 0.708,
+        "tier2_jobs_M": 0.14,
+        "tier3_jobs_M": 0.032,
+        "tier1_pct_of_workforce": 17.7,
+        "tier2_pct_of_workforce": 3.5,
+        "tier3_pct_of_workforce": 0.8,
+        "tier3_share_of_computer_users_pct": 3.6,
+        "confidence": "Model (low)",
+        "source_notes": "ITU/ECA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "031",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "031",
+        "iso3_alpha": "AZE",
+        "country_name": "Azerbaijan",
+        "total_workforce_M": 5.2,
+        "tier1_jobs_M": 2.87,
+        "tier2_jobs_M": 0.416,
+        "tier3_jobs_M": 0.146,
+        "tier1_pct_of_workforce": 55.2,
+        "tier2_pct_of_workforce": 8.0,
+        "tier3_pct_of_workforce": 2.8,
+        "tier3_share_of_computer_users_pct": 4.2,
+        "confidence": "Model (upper-mid)",
+        "source_notes": "ITU/ECA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "051",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "051",
+        "iso3_alpha": "ARM",
+        "country_name": "Armenia",
+        "total_workforce_M": 1.5,
+        "tier1_jobs_M": 0.78,
+        "tier2_jobs_M": 0.113,
+        "tier3_jobs_M": 0.037,
+        "tier1_pct_of_workforce": 52.0,
+        "tier2_pct_of_workforce": 7.5,
+        "tier3_pct_of_workforce": 2.5,
+        "tier3_share_of_computer_users_pct": 4.0,
+        "confidence": "Model (upper-mid)",
+        "source_notes": "ITU/ECA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "268",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "268",
+        "iso3_alpha": "GEO",
+        "country_name": "Georgia",
+        "total_workforce_M": 2.0,
+        "tier1_jobs_M": 0.966,
+        "tier2_jobs_M": 0.15,
+        "tier3_jobs_M": 0.044,
+        "tier1_pct_of_workforce": 48.3,
+        "tier2_pct_of_workforce": 7.5,
+        "tier3_pct_of_workforce": 2.2,
+        "tier3_share_of_computer_users_pct": 3.8,
+        "confidence": "Model (upper-mid)",
+        "source_notes": "ITU/ECA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "496",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "496",
+        "iso3_alpha": "MNG",
+        "country_name": "Mongolia",
+        "total_workforce_M": 1.4,
+        "tier1_jobs_M": 0.511,
+        "tier2_jobs_M": 0.084,
+        "tier3_jobs_M": 0.021,
+        "tier1_pct_of_workforce": 36.5,
+        "tier2_pct_of_workforce": 6.0,
+        "tier3_pct_of_workforce": 1.5,
+        "tier3_share_of_computer_users_pct": 3.4,
+        "confidence": "Model (lower-mid)",
+        "source_notes": "ITU/ECA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "364",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "364",
+        "iso3_alpha": "IRN",
+        "country_name": "Iran",
+        "total_workforce_M": 29.0,
+        "tier1_jobs_M": 14.529,
+        "tier2_jobs_M": 2.175,
+        "tier3_jobs_M": 0.696,
+        "tier1_pct_of_workforce": 50.1,
+        "tier2_pct_of_workforce": 7.5,
+        "tier3_pct_of_workforce": 2.4,
+        "tier3_share_of_computer_users_pct": 4.0,
+        "confidence": "Model (upper-mid)",
+        "source_notes": "ITU/MENA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "368",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "368",
+        "iso3_alpha": "IRQ",
+        "country_name": "Iraq",
+        "total_workforce_M": 10.0,
+        "tier1_jobs_M": 2.98,
+        "tier2_jobs_M": 0.5,
+        "tier3_jobs_M": 0.12,
+        "tier1_pct_of_workforce": 29.8,
+        "tier2_pct_of_workforce": 5.0,
+        "tier3_pct_of_workforce": 1.2,
+        "tier3_share_of_computer_users_pct": 3.3,
+        "confidence": "Model (upper-mid)",
+        "source_notes": "ITU/MENA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "400",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "400",
+        "iso3_alpha": "JOR",
+        "country_name": "Jordan",
+        "total_workforce_M": 3.0,
+        "tier1_jobs_M": 1.821,
+        "tier2_jobs_M": 0.255,
+        "tier3_jobs_M": 0.084,
+        "tier1_pct_of_workforce": 60.7,
+        "tier2_pct_of_workforce": 8.5,
+        "tier3_pct_of_workforce": 2.8,
+        "tier3_share_of_computer_users_pct": 3.9,
+        "confidence": "Model (upper-mid)",
+        "source_notes": "ITU/MENA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "422",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "422",
+        "iso3_alpha": "LBN",
+        "country_name": "Lebanon",
+        "total_workforce_M": 2.2,
+        "tier1_jobs_M": 1.199,
+        "tier2_jobs_M": 0.176,
+        "tier3_jobs_M": 0.055,
+        "tier1_pct_of_workforce": 54.5,
+        "tier2_pct_of_workforce": 8.0,
+        "tier3_pct_of_workforce": 2.5,
+        "tier3_share_of_computer_users_pct": 3.8,
+        "confidence": "Model (upper-mid)",
+        "source_notes": "ITU/MENA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "504",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "504",
+        "iso3_alpha": "MAR",
+        "country_name": "Morocco",
+        "total_workforce_M": 12.0,
+        "tier1_jobs_M": 7.116,
+        "tier2_jobs_M": 1.02,
+        "tier3_jobs_M": 0.264,
+        "tier1_pct_of_workforce": 59.3,
+        "tier2_pct_of_workforce": 8.5,
+        "tier3_pct_of_workforce": 2.2,
+        "tier3_share_of_computer_users_pct": 3.1,
+        "confidence": "Model (lower-mid)",
+        "source_notes": "ITU/MENA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "788",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "788",
+        "iso3_alpha": "TUN",
+        "country_name": "Tunisia",
+        "total_workforce_M": 4.4,
+        "tier1_jobs_M": 2.068,
+        "tier2_jobs_M": 0.308,
+        "tier3_jobs_M": 0.088,
+        "tier1_pct_of_workforce": 47.0,
+        "tier2_pct_of_workforce": 7.0,
+        "tier3_pct_of_workforce": 2.0,
+        "tier3_share_of_computer_users_pct": 3.6,
+        "confidence": "Model (lower-mid)",
+        "source_notes": "ITU/MENA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "434",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "434",
+        "iso3_alpha": "LBY",
+        "country_name": "Libya",
+        "total_workforce_M": 2.2,
+        "tier1_jobs_M": 0.462,
+        "tier2_jobs_M": 0.088,
+        "tier3_jobs_M": 0.022,
+        "tier1_pct_of_workforce": 21.0,
+        "tier2_pct_of_workforce": 4.0,
+        "tier3_pct_of_workforce": 1.0,
+        "tier3_share_of_computer_users_pct": 3.8,
+        "confidence": "Model (lower-mid)",
+        "source_notes": "ITU/MENA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "887",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "887",
+        "iso3_alpha": "YEM",
+        "country_name": "Yemen",
+        "total_workforce_M": 7.0,
+        "tier1_jobs_M": 1.113,
+        "tier2_jobs_M": 0.245,
+        "tier3_jobs_M": 0.042,
+        "tier1_pct_of_workforce": 15.9,
+        "tier2_pct_of_workforce": 3.5,
+        "tier3_pct_of_workforce": 0.6,
+        "tier3_share_of_computer_users_pct": 3.0,
+        "confidence": "Model (low)",
+        "source_notes": "ITU/MENA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "048",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "048",
+        "iso3_alpha": "BHR",
+        "country_name": "Bahrain",
+        "total_workforce_M": 0.8,
+        "tier1_jobs_M": 0.588,
+        "tier2_jobs_M": 0.08,
+        "tier3_jobs_M": 0.036,
+        "tier1_pct_of_workforce": 73.5,
+        "tier2_pct_of_workforce": 10.0,
+        "tier3_pct_of_workforce": 4.5,
+        "tier3_share_of_computer_users_pct": 5.1,
+        "confidence": "Model (high-income)",
+        "source_notes": "ITU/MENA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "414",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "414",
+        "iso3_alpha": "KWT",
+        "country_name": "Kuwait",
+        "total_workforce_M": 2.2,
+        "tier1_jobs_M": 1.624,
+        "tier2_jobs_M": 0.22,
+        "tier3_jobs_M": 0.092,
+        "tier1_pct_of_workforce": 73.8,
+        "tier2_pct_of_workforce": 10.0,
+        "tier3_pct_of_workforce": 4.2,
+        "tier3_share_of_computer_users_pct": 4.8,
+        "confidence": "Model (high-income)",
+        "source_notes": "ITU/MENA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "512",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "512",
+        "iso3_alpha": "OMN",
+        "country_name": "Oman",
+        "total_workforce_M": 2.4,
+        "tier1_jobs_M": 1.272,
+        "tier2_jobs_M": 0.192,
+        "tier3_jobs_M": 0.072,
+        "tier1_pct_of_workforce": 53.0,
+        "tier2_pct_of_workforce": 8.0,
+        "tier3_pct_of_workforce": 3.0,
+        "tier3_share_of_computer_users_pct": 4.7,
+        "confidence": "Model (upper-mid)",
+        "source_notes": "ITU/MENA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "634",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "634",
+        "iso3_alpha": "QAT",
+        "country_name": "Qatar",
+        "total_workforce_M": 2.1,
+        "tier1_jobs_M": 1.502,
+        "tier2_jobs_M": 0.21,
+        "tier3_jobs_M": 0.095,
+        "tier1_pct_of_workforce": 71.5,
+        "tier2_pct_of_workforce": 10.0,
+        "tier3_pct_of_workforce": 4.5,
+        "tier3_share_of_computer_users_pct": 5.2,
+        "confidence": "Model (high-income)",
+        "source_notes": "ITU/MENA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "024",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "024",
+        "iso3_alpha": "AGO",
+        "country_name": "Angola",
+        "total_workforce_M": 11.0,
+        "tier1_jobs_M": 1.364,
+        "tier2_jobs_M": 0.33,
+        "tier3_jobs_M": 0.066,
+        "tier1_pct_of_workforce": 12.4,
+        "tier2_pct_of_workforce": 3.0,
+        "tier3_pct_of_workforce": 0.6,
+        "tier3_share_of_computer_users_pct": 3.8,
+        "confidence": "Model (lower-mid)",
+        "source_notes": "ITU/SSA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "204",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "204",
+        "iso3_alpha": "BEN",
+        "country_name": "Benin",
+        "total_workforce_M": 4.5,
+        "tier1_jobs_M": 0.716,
+        "tier2_jobs_M": 0.158,
+        "tier3_jobs_M": 0.027,
+        "tier1_pct_of_workforce": 15.9,
+        "tier2_pct_of_workforce": 3.5,
+        "tier3_pct_of_workforce": 0.6,
+        "tier3_share_of_computer_users_pct": 3.0,
+        "confidence": "Model (low)",
+        "source_notes": "ITU/SSA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "072",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "072",
+        "iso3_alpha": "BWA",
+        "country_name": "Botswana",
+        "total_workforce_M": 1.2,
+        "tier1_jobs_M": 0.316,
+        "tier2_jobs_M": 0.054,
+        "tier3_jobs_M": 0.014,
+        "tier1_pct_of_workforce": 26.3,
+        "tier2_pct_of_workforce": 4.5,
+        "tier3_pct_of_workforce": 1.2,
+        "tier3_share_of_computer_users_pct": 3.8,
+        "confidence": "Model (upper-mid)",
+        "source_notes": "ITU/SSA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "854",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "854",
+        "iso3_alpha": "BFA",
+        "country_name": "Burkina Faso",
+        "total_workforce_M": 8.5,
+        "tier1_jobs_M": 1.003,
+        "tier2_jobs_M": 0.238,
+        "tier3_jobs_M": 0.034,
+        "tier1_pct_of_workforce": 11.8,
+        "tier2_pct_of_workforce": 2.8,
+        "tier3_pct_of_workforce": 0.4,
+        "tier3_share_of_computer_users_pct": 2.7,
+        "confidence": "Model (low)",
+        "source_notes": "ITU/SSA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "108",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "108",
+        "iso3_alpha": "BDI",
+        "country_name": "Burundi",
+        "total_workforce_M": 5.5,
+        "tier1_jobs_M": 0.259,
+        "tier2_jobs_M": 0.11,
+        "tier3_jobs_M": 0.017,
+        "tier1_pct_of_workforce": 4.7,
+        "tier2_pct_of_workforce": 2.0,
+        "tier3_pct_of_workforce": 0.3,
+        "tier3_share_of_computer_users_pct": 4.3,
+        "confidence": "Model (low)",
+        "source_notes": "ITU/SSA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "120",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "120",
+        "iso3_alpha": "CMR",
+        "country_name": "Cameroon",
+        "total_workforce_M": 11.0,
+        "tier1_jobs_M": 2.222,
+        "tier2_jobs_M": 0.44,
+        "tier3_jobs_M": 0.088,
+        "tier1_pct_of_workforce": 20.2,
+        "tier2_pct_of_workforce": 4.0,
+        "tier3_pct_of_workforce": 0.8,
+        "tier3_share_of_computer_users_pct": 3.2,
+        "confidence": "Model (lower-mid)",
+        "source_notes": "ITU/SSA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "140",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "140",
+        "iso3_alpha": "CAF",
+        "country_name": "Cent. African Rep.",
+        "total_workforce_M": 2.2,
+        "tier1_jobs_M": 0.125,
+        "tier2_jobs_M": 0.044,
+        "tier3_jobs_M": 0.007,
+        "tier1_pct_of_workforce": 5.7,
+        "tier2_pct_of_workforce": 2.0,
+        "tier3_pct_of_workforce": 0.3,
+        "tier3_share_of_computer_users_pct": 3.8,
+        "confidence": "Model (low)",
+        "source_notes": "ITU/SSA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "148",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "148",
+        "iso3_alpha": "TCD",
+        "country_name": "Chad",
+        "total_workforce_M": 6.5,
+        "tier1_jobs_M": 0.241,
+        "tier2_jobs_M": 0.13,
+        "tier3_jobs_M": 0.019,
+        "tier1_pct_of_workforce": 3.7,
+        "tier2_pct_of_workforce": 2.0,
+        "tier3_pct_of_workforce": 0.3,
+        "tier3_share_of_computer_users_pct": 5.0,
+        "confidence": "Model (low)",
+        "source_notes": "ITU/SSA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "180",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "180",
+        "iso3_alpha": "COD",
+        "country_name": "DR Congo",
+        "total_workforce_M": 31.0,
+        "tier1_jobs_M": 2.201,
+        "tier2_jobs_M": 0.775,
+        "tier3_jobs_M": 0.124,
+        "tier1_pct_of_workforce": 7.1,
+        "tier2_pct_of_workforce": 2.5,
+        "tier3_pct_of_workforce": 0.4,
+        "tier3_share_of_computer_users_pct": 4.0,
+        "confidence": "Model (low)",
+        "source_notes": "ITU/SSA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "178",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "178",
+        "iso3_alpha": "COG",
+        "country_name": "Rep. of Congo",
+        "total_workforce_M": 2.3,
+        "tier1_jobs_M": 0.14,
+        "tier2_jobs_M": 0.058,
+        "tier3_jobs_M": 0.009,
+        "tier1_pct_of_workforce": 6.1,
+        "tier2_pct_of_workforce": 2.5,
+        "tier3_pct_of_workforce": 0.4,
+        "tier3_share_of_computer_users_pct": 4.4,
+        "confidence": "Model (low)",
+        "source_notes": "ITU/SSA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "384",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "384",
+        "iso3_alpha": "CIV",
+        "country_name": "C\u00f4te d'Ivoire",
+        "total_workforce_M": 10.0,
+        "tier1_jobs_M": 2.45,
+        "tier2_jobs_M": 0.45,
+        "tier3_jobs_M": 0.1,
+        "tier1_pct_of_workforce": 24.5,
+        "tier2_pct_of_workforce": 4.5,
+        "tier3_pct_of_workforce": 1.0,
+        "tier3_share_of_computer_users_pct": 3.3,
+        "confidence": "Model (lower-mid)",
+        "source_notes": "ITU/SSA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "231",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "231",
+        "iso3_alpha": "ETH",
+        "country_name": "Ethiopia",
+        "total_workforce_M": 57.0,
+        "tier1_jobs_M": 7.125,
+        "tier2_jobs_M": 1.71,
+        "tier3_jobs_M": 0.285,
+        "tier1_pct_of_workforce": 12.5,
+        "tier2_pct_of_workforce": 3.0,
+        "tier3_pct_of_workforce": 0.5,
+        "tier3_share_of_computer_users_pct": 3.1,
+        "confidence": "Model (low)",
+        "source_notes": "ITU/SSA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "266",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "266",
+        "iso3_alpha": "GAB",
+        "country_name": "Gabon",
+        "total_workforce_M": 0.9,
+        "tier1_jobs_M": 0.28,
+        "tier2_jobs_M": 0.05,
+        "tier3_jobs_M": 0.013,
+        "tier1_pct_of_workforce": 31.1,
+        "tier2_pct_of_workforce": 5.5,
+        "tier3_pct_of_workforce": 1.4,
+        "tier3_share_of_computer_users_pct": 3.7,
+        "confidence": "Model (upper-mid)",
+        "source_notes": "ITU/SSA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "288",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "288",
+        "iso3_alpha": "GHA",
+        "country_name": "Ghana",
+        "total_workforce_M": 13.0,
+        "tier1_jobs_M": 4.745,
+        "tier2_jobs_M": 0.78,
+        "tier3_jobs_M": 0.195,
+        "tier1_pct_of_workforce": 36.5,
+        "tier2_pct_of_workforce": 6.0,
+        "tier3_pct_of_workforce": 1.5,
+        "tier3_share_of_computer_users_pct": 3.4,
+        "confidence": "Model (lower-mid)",
+        "source_notes": "ITU/SSA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "324",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "324",
+        "iso3_alpha": "GIN",
+        "country_name": "Guinea",
+        "total_workforce_M": 5.5,
+        "tier1_jobs_M": 0.688,
+        "tier2_jobs_M": 0.165,
+        "tier3_jobs_M": 0.028,
+        "tier1_pct_of_workforce": 12.5,
+        "tier2_pct_of_workforce": 3.0,
+        "tier3_pct_of_workforce": 0.5,
+        "tier3_share_of_computer_users_pct": 3.1,
+        "confidence": "Model (low)",
+        "source_notes": "ITU/SSA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "426",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "426",
+        "iso3_alpha": "LSO",
+        "country_name": "Lesotho",
+        "total_workforce_M": 1.0,
+        "tier1_jobs_M": 0.139,
+        "tier2_jobs_M": 0.035,
+        "tier3_jobs_M": 0.006,
+        "tier1_pct_of_workforce": 13.9,
+        "tier2_pct_of_workforce": 3.5,
+        "tier3_pct_of_workforce": 0.6,
+        "tier3_share_of_computer_users_pct": 3.3,
+        "confidence": "Model (low)",
+        "source_notes": "ITU/SSA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "430",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "430",
+        "iso3_alpha": "LBR",
+        "country_name": "Liberia",
+        "total_workforce_M": 2.0,
+        "tier1_jobs_M": 0.25,
+        "tier2_jobs_M": 0.06,
+        "tier3_jobs_M": 0.01,
+        "tier1_pct_of_workforce": 12.5,
+        "tier2_pct_of_workforce": 3.0,
+        "tier3_pct_of_workforce": 0.5,
+        "tier3_share_of_computer_users_pct": 3.1,
+        "confidence": "Model (low)",
+        "source_notes": "ITU/SSA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "450",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "450",
+        "iso3_alpha": "MDG",
+        "country_name": "Madagascar",
+        "total_workforce_M": 14.0,
+        "tier1_jobs_M": 1.652,
+        "tier2_jobs_M": 0.392,
+        "tier3_jobs_M": 0.056,
+        "tier1_pct_of_workforce": 11.8,
+        "tier2_pct_of_workforce": 2.8,
+        "tier3_pct_of_workforce": 0.4,
+        "tier3_share_of_computer_users_pct": 2.7,
+        "confidence": "Model (low)",
+        "source_notes": "ITU/SSA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "454",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "454",
+        "iso3_alpha": "MWI",
+        "country_name": "Malawi",
+        "total_workforce_M": 8.0,
+        "tier1_jobs_M": 0.536,
+        "tier2_jobs_M": 0.16,
+        "tier3_jobs_M": 0.024,
+        "tier1_pct_of_workforce": 6.7,
+        "tier2_pct_of_workforce": 2.0,
+        "tier3_pct_of_workforce": 0.3,
+        "tier3_share_of_computer_users_pct": 3.3,
+        "confidence": "Model (low)",
+        "source_notes": "ITU/SSA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "466",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "466",
+        "iso3_alpha": "MLI",
+        "country_name": "Mali",
+        "total_workforce_M": 7.0,
+        "tier1_jobs_M": 0.497,
+        "tier2_jobs_M": 0.175,
+        "tier3_jobs_M": 0.028,
+        "tier1_pct_of_workforce": 7.1,
+        "tier2_pct_of_workforce": 2.5,
+        "tier3_pct_of_workforce": 0.4,
+        "tier3_share_of_computer_users_pct": 4.0,
+        "confidence": "Model (low)",
+        "source_notes": "ITU/SSA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "478",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "478",
+        "iso3_alpha": "MRT",
+        "country_name": "Mauritania",
+        "total_workforce_M": 2.0,
+        "tier1_jobs_M": 0.23,
+        "tier2_jobs_M": 0.06,
+        "tier3_jobs_M": 0.01,
+        "tier1_pct_of_workforce": 11.5,
+        "tier2_pct_of_workforce": 3.0,
+        "tier3_pct_of_workforce": 0.5,
+        "tier3_share_of_computer_users_pct": 3.3,
+        "confidence": "Model (low)",
+        "source_notes": "ITU/SSA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "480",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "480",
+        "iso3_alpha": "MUS",
+        "country_name": "Mauritius",
+        "total_workforce_M": 0.6,
+        "tier1_jobs_M": 0.3,
+        "tier2_jobs_M": 0.045,
+        "tier3_jobs_M": 0.015,
+        "tier1_pct_of_workforce": 50.0,
+        "tier2_pct_of_workforce": 7.5,
+        "tier3_pct_of_workforce": 2.5,
+        "tier3_share_of_computer_users_pct": 4.2,
+        "confidence": "Model (upper-mid)",
+        "source_notes": "ITU/SSA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "508",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "508",
+        "iso3_alpha": "MOZ",
+        "country_name": "Mozambique",
+        "total_workforce_M": 13.0,
+        "tier1_jobs_M": 1.534,
+        "tier2_jobs_M": 0.364,
+        "tier3_jobs_M": 0.052,
+        "tier1_pct_of_workforce": 11.8,
+        "tier2_pct_of_workforce": 2.8,
+        "tier3_pct_of_workforce": 0.4,
+        "tier3_share_of_computer_users_pct": 2.7,
+        "confidence": "Model (low)",
+        "source_notes": "ITU/SSA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "516",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "516",
+        "iso3_alpha": "NAM",
+        "country_name": "Namibia",
+        "total_workforce_M": 1.0,
+        "tier1_jobs_M": 0.243,
+        "tier2_jobs_M": 0.045,
+        "tier3_jobs_M": 0.012,
+        "tier1_pct_of_workforce": 24.3,
+        "tier2_pct_of_workforce": 4.5,
+        "tier3_pct_of_workforce": 1.2,
+        "tier3_share_of_computer_users_pct": 4.0,
+        "confidence": "Model (upper-mid)",
+        "source_notes": "ITU/SSA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "562",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "562",
+        "iso3_alpha": "NER",
+        "country_name": "Niger",
+        "total_workforce_M": 9.0,
+        "tier1_jobs_M": 0.513,
+        "tier2_jobs_M": 0.18,
+        "tier3_jobs_M": 0.027,
+        "tier1_pct_of_workforce": 5.7,
+        "tier2_pct_of_workforce": 2.0,
+        "tier3_pct_of_workforce": 0.3,
+        "tier3_share_of_computer_users_pct": 3.8,
+        "confidence": "Model (low)",
+        "source_notes": "ITU/SSA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "646",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "646",
+        "iso3_alpha": "RWA",
+        "country_name": "Rwanda",
+        "total_workforce_M": 7.0,
+        "tier1_jobs_M": 0.868,
+        "tier2_jobs_M": 0.21,
+        "tier3_jobs_M": 0.042,
+        "tier1_pct_of_workforce": 12.4,
+        "tier2_pct_of_workforce": 3.0,
+        "tier3_pct_of_workforce": 0.6,
+        "tier3_share_of_computer_users_pct": 3.8,
+        "confidence": "Model (low)",
+        "source_notes": "ITU/SSA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "686",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "686",
+        "iso3_alpha": "SEN",
+        "country_name": "Senegal",
+        "total_workforce_M": 7.5,
+        "tier1_jobs_M": 1.845,
+        "tier2_jobs_M": 0.338,
+        "tier3_jobs_M": 0.068,
+        "tier1_pct_of_workforce": 24.6,
+        "tier2_pct_of_workforce": 4.5,
+        "tier3_pct_of_workforce": 0.9,
+        "tier3_share_of_computer_users_pct": 3.0,
+        "confidence": "Model (lower-mid)",
+        "source_notes": "ITU/SSA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "694",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "694",
+        "iso3_alpha": "SLE",
+        "country_name": "Sierra Leone",
+        "total_workforce_M": 3.0,
+        "tier1_jobs_M": 0.216,
+        "tier2_jobs_M": 0.075,
+        "tier3_jobs_M": 0.009,
+        "tier1_pct_of_workforce": 7.2,
+        "tier2_pct_of_workforce": 2.5,
+        "tier3_pct_of_workforce": 0.3,
+        "tier3_share_of_computer_users_pct": 3.0,
+        "confidence": "Model (low)",
+        "source_notes": "ITU/SSA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "729",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "729",
+        "iso3_alpha": "SDN",
+        "country_name": "Sudan",
+        "total_workforce_M": 14.0,
+        "tier1_jobs_M": 2.212,
+        "tier2_jobs_M": 0.49,
+        "tier3_jobs_M": 0.098,
+        "tier1_pct_of_workforce": 15.8,
+        "tier2_pct_of_workforce": 3.5,
+        "tier3_pct_of_workforce": 0.7,
+        "tier3_share_of_computer_users_pct": 3.5,
+        "confidence": "Model (low)",
+        "source_notes": "ITU/SSA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "834",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "834",
+        "iso3_alpha": "TZA",
+        "country_name": "Tanzania",
+        "total_workforce_M": 28.0,
+        "tier1_jobs_M": 4.452,
+        "tier2_jobs_M": 0.98,
+        "tier3_jobs_M": 0.168,
+        "tier1_pct_of_workforce": 15.9,
+        "tier2_pct_of_workforce": 3.5,
+        "tier3_pct_of_workforce": 0.6,
+        "tier3_share_of_computer_users_pct": 3.0,
+        "confidence": "Model (low)",
+        "source_notes": "ITU/SSA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "800",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "800",
+        "iso3_alpha": "UGA",
+        "country_name": "Uganda",
+        "total_workforce_M": 18.0,
+        "tier1_jobs_M": 2.43,
+        "tier2_jobs_M": 0.54,
+        "tier3_jobs_M": 0.09,
+        "tier1_pct_of_workforce": 13.5,
+        "tier2_pct_of_workforce": 3.0,
+        "tier3_pct_of_workforce": 0.5,
+        "tier3_share_of_computer_users_pct": 2.9,
+        "confidence": "Model (low)",
+        "source_notes": "ITU/SSA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "894",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "894",
+        "iso3_alpha": "ZMB",
+        "country_name": "Zambia",
+        "total_workforce_M": 8.0,
+        "tier1_jobs_M": 0.576,
+        "tier2_jobs_M": 0.2,
+        "tier3_jobs_M": 0.024,
+        "tier1_pct_of_workforce": 7.2,
+        "tier2_pct_of_workforce": 2.5,
+        "tier3_pct_of_workforce": 0.3,
+        "tier3_share_of_computer_users_pct": 3.0,
+        "confidence": "Model (low)",
+        "source_notes": "ITU/SSA proxy"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "716",
+      "geometry": null,
+      "properties": {
+        "iso_numeric": "716",
+        "iso3_alpha": "ZWE",
+        "country_name": "Zimbabwe",
+        "total_workforce_M": 7.5,
+        "tier1_jobs_M": 1.583,
+        "tier2_jobs_M": 0.3,
+        "tier3_jobs_M": 0.068,
+        "tier1_pct_of_workforce": 21.1,
+        "tier2_pct_of_workforce": 4.0,
+        "tier3_pct_of_workforce": 0.9,
+        "tier3_share_of_computer_users_pct": 3.5,
+        "confidence": "Model (low)",
+        "source_notes": "ITU/SSA proxy"
+      }
+    }
+  ]
+}

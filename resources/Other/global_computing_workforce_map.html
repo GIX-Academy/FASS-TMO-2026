@@ -1,0 +1,167 @@
+
+<h2 class="sr-only">Interactive world map showing estimated computer-using workforce (Tier 1) and computing profession workforce (Tier 3) as percentages of total employment for 35 countries</h2>
+
+<style>
+#map-wrap { width: 100%; padding: 0.5rem 0; }
+#controls { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: 12px; }
+.ctrl-btn { padding: 6px 14px; font-size: 13px; border-radius: var(--border-radius-md); cursor: pointer; border: 0.5px solid var(--color-border-secondary); background: var(--color-background-primary); color: var(--color-text-primary); transition: background 0.15s; }
+.ctrl-btn.active { background: #185FA5; color: #E6F1FB; border-color: #185FA5; }
+#legend { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; margin-top: 8px; font-size: 12px; color: var(--color-text-secondary); }
+.leg-swatch { width: 18px; height: 12px; border-radius: 2px; display: inline-block; }
+#tooltip { position: absolute; background: var(--color-background-primary); border: 0.5px solid var(--color-border-secondary); border-radius: var(--border-radius-md); padding: 10px 14px; font-size: 13px; pointer-events: none; display: none; z-index: 10; max-width: 220px; line-height: 1.6; }
+#tooltip strong { font-weight: 500; font-size: 14px; }
+.source-note { font-size: 11px; color: var(--color-text-tertiary); margin-top: 10px; line-height: 1.5; }
+#map-wrap { position: relative; }
+</style>
+
+<div id="map-wrap">
+  <div id="controls">
+    <button class="ctrl-btn active" onclick="setMode('tier1')">Computer-using workforce (Tier 1+2+3)</button>
+    <button class="ctrl-btn" onclick="setMode('tier3')">Computing profession (Tier 3)</button>
+  </div>
+  <div id="map-container" style="width:100%; position:relative;"></div>
+  <div id="legend"></div>
+  <div id="tooltip"></div>
+  <p class="source-note">Sources: Eurostat 2023–24, IMDA 2024, BLS 2023, ITU Facts &amp; Figures 2024, ILO ILOSTAT, OECD Skills for the Digital Transition 2022, national statistical offices. Tier 1+2+3 = all computer-using workers; Tier 3 = computing profession (ICT specialists). Confidence: High = direct national data; Med = regional data + structural proxy; Low = structural proxy only. Grey = no estimate.</p>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<script>
+const countryData = {
+  "702": { name: "Singapore",      t1: 90, t3: 5.8, conf: "High",   src: "IMDA 2024, MOM 2024" },
+  "840": { name: "United States",  t1: 78, t3: 4.5, conf: "High",   src: "BLS 2023, OECD" },
+  "826": { name: "United Kingdom", t1: 76, t3: 5.1, conf: "High",   src: "Eurostat/ONS 2023" },
+  "276": { name: "Germany",        t1: 74, t3: 4.6, conf: "High",   src: "Eurostat 2023" },
+  "250": { name: "France",         t1: 72, t3: 4.4, conf: "High",   src: "Eurostat 2023" },
+  "752": { name: "Sweden",         t1: 82, t3: 8.7, conf: "High",   src: "Eurostat 2024" },
+  "246": { name: "Finland",        t1: 80, t3: 7.2, conf: "High",   src: "Eurostat 2023" },
+  "528": { name: "Netherlands",    t1: 80, t3: 6.1, conf: "High",   src: "Eurostat 2023" },
+  "372": { name: "Ireland",        t1: 78, t3: 6.1, conf: "High",   src: "Eurostat 2021" },
+  "233": { name: "Estonia",        t1: 75, t3: 6.8, conf: "High",   src: "Eurostat 2022" },
+  "380": { name: "Italy",          t1: 65, t3: 3.7, conf: "High",   src: "Eurostat 2023" },
+  "724": { name: "Spain",          t1: 65, t3: 3.9, conf: "High",   src: "Eurostat 2023" },
+  "616": { name: "Poland",         t1: 62, t3: 4.0, conf: "High",   src: "Eurostat 2023" },
+  "036": { name: "Australia",      t1: 76, t3: 4.5, conf: "Med",    src: "ACS/Deloitte, ITU" },
+  "392": { name: "Japan",          t1: 72, t3: 3.8, conf: "Med",    src: "MIC Japan, OECD" },
+  "410": { name: "South Korea",    t1: 74, t3: 4.8, conf: "Med",    src: "MSIT Korea, OECD" },
+  "124": { name: "Canada",         t1: 77, t3: 5.2, conf: "Med",    src: "StatCan, OECD" },
+  "076": { name: "Brazil",         t1: 42, t3: 2.0, conf: "Med",    src: "IBGE, ITU 2023" },
+  "484": { name: "Mexico",         t1: 38, t3: 1.5, conf: "Med",    src: "INEGI, ITU 2023" },
+  "710": { name: "South Africa",   t1: 32, t3: 1.8, conf: "Med",    src: "Stats SA, ITU" },
+  "818": { name: "Egypt",          t1: 28, t3: 1.2, conf: "Low",    src: "ITU, World Bank" },
+  "356": { name: "India",          t1: 22, t3: 1.5, conf: "Med",    src: "NASSCOM, ITU 2023" },
+  "156": { name: "China",          t1: 46, t3: 2.5, conf: "Med",    src: "NBS China, ITU" },
+  "360": { name: "Indonesia",      t1: 28, t3: 1.1, conf: "Low",    src: "BPS, ITU 2023" },
+  "608": { name: "Philippines",    t1: 30, t3: 1.8, conf: "Low",    src: "PSA, ITU 2023" },
+  "764": { name: "Thailand",       t1: 35, t3: 1.6, conf: "Low",    src: "NIDA, ITU 2023" },
+  "458": { name: "Malaysia",       t1: 52, t3: 3.0, conf: "Med",    src: "DOSM, ITU 2023" },
+  "566": { name: "Nigeria",        t1: 15, t3: 0.6, conf: "Low",    src: "NBS, ITU 2023" },
+  "404": { name: "Kenya",          t1: 18, t3: 0.7, conf: "Low",    src: "KNBS, ITU 2023" },
+  "012": { name: "Algeria",        t1: 25, t3: 0.9, conf: "Low",    src: "ONS Algeria, ITU" },
+  "682": { name: "Saudi Arabia",   t1: 55, t3: 3.2, conf: "Med",    src: "MCIT KSA, ITU" },
+  "784": { name: "UAE",            t1: 68, t3: 4.1, conf: "Med",    src: "TRA UAE, ITU 2023" },
+  "643": { name: "Russia",         t1: 58, t3: 3.5, conf: "Med",    src: "HSE Russia 2023" },
+  "792": { name: "Turkey",         t1: 48, t3: 2.8, conf: "Med",    src: "Eurostat assoc, ITU" },
+  "586": { name: "Pakistan",       t1: 12, t3: 0.5, conf: "Low",    src: "PBS, ITU 2023" },
+};
+
+const t1Breaks = [15, 30, 45, 60, 75, 90];
+const t3Breaks = [1, 2, 3, 4, 5.5, 9];
+
+const blueRamp = ["#E6F1FB","#B5D4F4","#85B7EB","#378ADD","#185FA5","#0C447C"];
+const grayEmpty = "#D3D1C7";
+
+let currentMode = 'tier1';
+
+function getColor(id, mode) {
+  const d = countryData[String(id).padStart(3,'0')];
+  if (!d) return grayEmpty;
+  const val = mode === 'tier1' ? d.t1 : d.t3;
+  const breaks = mode === 'tier1' ? t1Breaks : t3Breaks;
+  for (let i = 0; i < breaks.length; i++) {
+    if (val <= breaks[i]) return blueRamp[i];
+  }
+  return blueRamp[blueRamp.length - 1];
+}
+
+function getLegendLabels(mode) {
+  const b = mode === 'tier1' ? t1Breaks : t3Breaks;
+  return [
+    `≤${b[0]}%`, `${b[0]+1}–${b[1]}%`, `${b[1]+1}–${b[2]}%`,
+    `${b[2]+1}–${b[3]}%`, `${b[3]+1}–${b[4]}%`, `>${b[4]}%`
+  ];
+}
+
+function renderLegend(mode) {
+  const labels = getLegendLabels(mode);
+  const el = document.getElementById('legend');
+  el.innerHTML = '<span style="margin-right:4px">Workforce %:</span>' +
+    blueRamp.map((c,i) =>
+      `<span style="display:flex;align-items:center;gap:4px">
+        <span class="leg-swatch" style="background:${c}"></span>
+        <span>${labels[i]}</span>
+      </span>`
+    ).join('') +
+    `<span style="display:flex;align-items:center;gap:4px">
+      <span class="leg-swatch" style="background:${grayEmpty}"></span>
+      <span>No data</span>
+    </span>`;
+}
+
+function setMode(mode) {
+  currentMode = mode;
+  document.querySelectorAll('.ctrl-btn').forEach(b => b.classList.toggle('active', b.textContent.includes(mode === 'tier1' ? 'Computer-using' : 'Computing')));
+  d3.selectAll('path.country').attr('fill', d => getColor(d.id, mode));
+  renderLegend(mode);
+}
+
+const isDark = matchMedia('(prefers-color-scheme: dark)').matches;
+const strokeColor = isDark ? 'rgba(255,255,255,0.15)' : '#fff';
+
+const container = document.getElementById('map-container');
+const W = 680, H = 360;
+const svg = d3.select(container).append('svg')
+  .attr('viewBox', `0 0 ${W} ${H}`)
+  .attr('width', '100%')
+  .style('display','block');
+
+const projection = d3.geoNaturalEarth1().scale(108).translate([W/2, H/2]);
+const path = d3.geoPath(projection);
+const tooltip = document.getElementById('tooltip');
+
+d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json').then(world => {
+  const features = topojson.feature(world, world.objects.countries).features;
+
+  svg.append('rect').attr('width', W).attr('height', H).attr('fill', 'none');
+
+  svg.selectAll('path.country')
+    .data(features)
+    .join('path')
+    .attr('class','country')
+    .attr('d', path)
+    .attr('fill', d => getColor(d.id, currentMode))
+    .attr('stroke', strokeColor)
+    .attr('stroke-width', 0.4)
+    .on('mousemove', function(event, d) {
+      const id = String(d.id).padStart(3,'0');
+      const info = countryData[id];
+      if (!info) return;
+      const confColor = info.conf === 'High' ? '#3B6D11' : info.conf === 'Med' ? '#BA7517' : '#A32D2D';
+      tooltip.style.display = 'block';
+      const rect = container.getBoundingClientRect();
+      const mx = event.clientX - rect.left;
+      const my = event.clientY - rect.top;
+      tooltip.style.left = (mx + 12) + 'px';
+      tooltip.style.top = (my - 10) + 'px';
+      tooltip.innerHTML = `<strong>${info.name}</strong><br>
+        Computer-using: <b>${info.t1}%</b><br>
+        Computing profession: <b>${info.t3}%</b><br>
+        <span style="color:${confColor};font-size:11px">Confidence: ${info.conf}</span><br>
+        <span style="font-size:11px;color:var(--color-text-tertiary)">${info.src}</span>`;
+    })
+    .on('mouseleave', () => { tooltip.style.display = 'none'; });
+
+  renderLegend(currentMode);
+});
+</script>

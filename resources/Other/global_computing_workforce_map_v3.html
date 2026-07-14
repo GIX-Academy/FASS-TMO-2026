@@ -1,0 +1,314 @@
+
+<h2 class="sr-only">Interactive world choropleth map with three views: computer-using workforce, computing profession, and Tier 3 share of computer users, for approximately 155 countries, with Natural Earth projection boundary.</h2>
+<style>
+#controls{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
+.cb{padding:5px 13px;font-size:13px;border-radius:var(--border-radius-md);cursor:pointer;border:0.5px solid var(--color-border-secondary);background:var(--color-background-primary);color:var(--color-text-primary);white-space:nowrap}
+.cb.on{background:#185FA5;color:#E6F1FB;border-color:#185FA5}
+#legend{display:flex;gap:5px;align-items:center;flex-wrap:wrap;margin-top:8px;font-size:12px;color:var(--color-text-secondary)}
+.ls{width:18px;height:11px;border-radius:2px;display:inline-block}
+#tt{position:absolute;background:var(--color-background-primary);border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);padding:9px 13px;font-size:12px;pointer-events:none;display:none;z-index:10;max-width:240px;line-height:1.6}
+#tt b{font-weight:500;font-size:13px}
+.sn{font-size:11px;color:var(--color-text-tertiary);margin-top:8px;line-height:1.5}
+#wrap{position:relative;width:100%}
+</style>
+
+<div id="wrap">
+<div id="controls">
+  <button class="cb on"  id="btn-t1"    onclick="setMode('t1')">Computer Using (Tier 1+2+3)</button>
+  <button class="cb"     id="btn-t3"    onclick="setMode('t3')">Computing Profession (Tier 3)</button>
+  <button class="cb"     id="btn-ratio" onclick="setMode('ratio')">Tier 3 Share of Computer Users</button>
+</div>
+<div id="mc" style="width:100%;position:relative"></div>
+<div id="legend"></div>
+<div id="tt"></div>
+<p class="sn">Estimation model: Tier 1 = f(internet penetration, agricultural employment share). Tier 3 = f(GDP/capita band, regional ICT benchmarks). Ratio = Tier 3 % ÷ all computer-using %. Anchor data: Eurostat 2023–24, IMDA 2024, BLS 2023, ITU 2023–24 (35 countries direct). ~108 additional countries estimated. Confidence: ±5pp high-income, ±8pp upper-mid, ±12pp low-income.</p>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<script>
+const anchor = {
+  "702":[90,5.8,"Direct","IMDA 2024, MOM"],
+  "840":[78,4.5,"Direct","BLS 2023"],
+  "826":[76,5.1,"Direct","ONS/Eurostat 2023"],
+  "276":[74,4.6,"Direct","Eurostat 2023"],
+  "250":[72,4.4,"Direct","Eurostat 2023"],
+  "752":[82,8.7,"Direct","Eurostat 2024"],
+  "246":[80,7.2,"Direct","Eurostat 2023"],
+  "528":[80,6.1,"Direct","Eurostat 2023"],
+  "372":[78,6.1,"Direct","Eurostat 2021"],
+  "233":[75,6.8,"Direct","Eurostat 2022"],
+  "380":[65,3.7,"Direct","Eurostat 2023"],
+  "724":[65,3.9,"Direct","Eurostat 2023"],
+  "616":[62,4.0,"Direct","Eurostat 2023"],
+  "036":[76,4.5,"Direct","ACS/Deloitte, ITU"],
+  "392":[72,3.8,"Direct","MIC Japan"],
+  "410":[74,4.8,"Direct","MSIT Korea"],
+  "124":[77,5.2,"Direct","StatCan"],
+  "076":[42,2.0,"Direct","IBGE, ITU 2023"],
+  "484":[38,1.5,"Direct","INEGI, ITU"],
+  "710":[32,1.8,"Direct","Stats SA"],
+  "818":[28,1.2,"Model","ITU, World Bank"],
+  "356":[22,1.5,"Direct","NASSCOM, ITU"],
+  "156":[46,2.5,"Direct","NBS China, ITU"],
+  "360":[28,1.1,"Model","BPS, ITU"],
+  "608":[30,1.8,"Model","PSA, ITU"],
+  "764":[35,1.6,"Model","NIDA, ITU"],
+  "458":[52,3.0,"Direct","DOSM, ITU"],
+  "566":[15,0.6,"Model","NBS Nigeria, ITU"],
+  "404":[18,0.7,"Model","KNBS, ITU"],
+  "012":[25,0.9,"Model","ONS Algeria, ITU"],
+  "682":[55,3.2,"Direct","MCIT KSA"],
+  "784":[68,4.1,"Direct","TRA UAE"],
+  "643":[58,3.5,"Direct","HSE Russia 2023"],
+  "792":[48,2.8,"Direct","Eurostat assoc, ITU"],
+  "586":[12,0.5,"Model","PBS, ITU"],
+};
+
+const model_inputs = {
+  "040":[88,3,4,"EU"],"056":[91,1,4,"EU"],"100":[75,18,3,"EU"],"191":[83,7,4,"EU"],
+  "196":[90,3,4,"EU"],"203":[88,3,4,"EU"],"208":[98,2,4,"EU"],"348":[85,5,4,"EU"],
+  "428":[88,7,4,"EU"],"440":[83,8,4,"EU"],"442":[98,1,4,"EU"],"470":[90,1,4,"EU"],
+  "620":[82,7,3,"EU"],"642":[76,22,3,"EU"],"703":[89,3,4,"EU"],"705":[85,8,4,"EU"],
+  "578":[99,2,4,"EU"],"756":[97,3,4,"EU"],"300":[79,12,3,"EU"],"112":[81,14,3,"ECA"],
+  "804":[75,14,3,"ECA"],"498":[68,32,3,"ECA"],"688":[79,14,3,"EU"],"807":[72,16,3,"EU"],
+  "008":[78,38,3,"EU"],"070":[76,18,3,"EU"],"499":[76,7,3,"EU"],
+  "032":[86,4,3,"LAC"],"152":[90,9,4,"LAC"],"170":[68,17,3,"LAC"],"604":[72,28,3,"LAC"],
+  "218":[65,29,3,"LAC"],"068":[51,26,3,"LAC"],"600":[72,19,3,"LAC"],"858":[88,10,4,"LAC"],
+  "862":[46,6,3,"LAC"],"340":[40,32,2,"LAC"],"222":[50,17,2,"LAC"],"320":[48,33,2,"LAC"],
+  "332":[38,44,2,"LAC"],"192":[72,18,3,"LAC"],"388":[82,16,3,"LAC"],
+  "214":[60,36,2,"LAC"],"188":[82,12,3,"LAC"],"591":[68,16,3,"LAC"],
+  "050":[38,40,2,"SA"],"144":[51,28,3,"SA"],"524":[46,66,2,"SA"],"104":[33,52,2,"SA"],
+  "116":[52,35,2,"SA"],"418":[50,62,2,"SA"],"004":[18,44,1,"SA"],
+  "554":[95,6,4,"SEAP"],"344":[92,0,4,"SEAP"],"446":[88,1,4,"SEAP"],"158":[89,5,4,"SEAP"],
+  "398":[79,4,3,"ECA"],"860":[58,26,3,"ECA"],"417":[48,22,3,"ECA"],"762":[32,46,2,"ECA"],
+  "795":[34,12,3,"ECA"],"031":[86,38,3,"ECA"],"051":[78,32,3,"ECA"],"268":[74,38,3,"ECA"],
+  "496":[59,28,3,"ECA"],
+  "364":[78,18,3,"MENA"],"368":[49,18,3,"MENA"],"400":[89,2,3,"MENA"],"422":[82,14,3,"MENA"],
+  "504":[88,10,3,"MENA"],"788":[72,14,3,"MENA"],"434":[35,22,2,"MENA"],"760":[38,16,2,"MENA"],
+  "887":[64,10,3,"MENA"],"275":[58,12,3,"MENA"],"048":[98,1,4,"MENA"],"414":[99,1,4,"MENA"],
+  "512":[78,8,3,"MENA"],"634":[96,0,4,"MENA"],
+  "024":[22,70,1,"SSA"],"204":[30,52,2,"SSA"],"072":[42,26,2,"SSA"],"854":[22,82,1,"SSA"],
+  "108":[8,86,1,"SSA"],"120":[36,60,1,"SSA"],"140":[11,74,1,"SSA"],"148":[8,82,1,"SSA"],
+  "180":[14,72,1,"SSA"],"178":[12,62,1,"SSA"],"384":[40,36,2,"SSA"],"231":[22,68,1,"SSA"],
+  "266":[48,37,2,"SSA"],"288":[58,32,2,"SSA"],"324":[24,74,1,"SSA"],"426":[28,82,1,"SSA"],
+  "430":[24,68,1,"SSA"],"450":[22,72,1,"SSA"],"454":[12,82,1,"SSA"],"466":[14,74,1,"SSA"],
+  "478":[20,52,1,"SSA"],"480":[72,6,3,"SSA"],"508":[22,74,1,"SSA"],"516":[38,28,2,"SSA"],
+  "562":[12,82,1,"SSA"],"646":[22,63,2,"SSA"],"686":[40,34,2,"SSA"],"694":[14,72,1,"SSA"],
+  "706":[14,62,1,"SSA"],"729":[28,42,2,"SSA"],"834":[28,66,1,"SSA"],"800":[24,72,1,"SSA"],
+  "894":[14,72,1,"SSA"],"716":[34,58,1,"SSA"],
+};
+
+const t3Base={1:0.4,2:1.0,3:2.2,4:4.2};
+const t3Reg={EU:1.15,NA:1.1,LAC:0.82,MENA:0.88,SSA:0.65,SA:0.72,SEAP:1.0,ECA:0.88};
+
+function estT1(inet,agri){
+  const na=1-(agri/100);
+  let v=(inet*0.60*1.12)*na+(inet*0.08);
+  v=Math.max(v,inet*0.22);
+  return Math.min(Math.round(v*10)/10,95);
+}
+function estT3(g,r){ return Math.round((t3Base[g]*t3Reg[r])*10)/10; }
+
+const countries={};
+Object.keys(anchor).forEach(id=>{
+  const[t1,t3,conf,src]=anchor[id];
+  countries[id]={t1,t3,conf,src};
+});
+Object.keys(model_inputs).forEach(id=>{
+  if(countries[id])return;
+  const[inet,agri,g,r]=model_inputs[id];
+  countries[id]={t1:estT1(inet,agri),t3:estT3(g,r),
+    conf:g===4?"Model (high-income)":g===3?"Model (upper-mid)":"Model (lower-mid/low)",
+    src:"Estimated: ITU/World Bank proxies"};
+});
+
+// Colour ramps
+const blueRamp=["#E6F1FB","#B5D4F4","#85B7EB","#378ADD","#185FA5","#0C447C"];
+// Sequential greens for ratio tab
+const greenRamp=["#f7fcf5","#c7e9c0","#74c476","#31a354","#006d2c","#00441b"];
+const grayEmpty="#D3D1C7";
+
+const t1Breaks=[15,30,45,60,75,90];
+const t3Breaks=[1,2,3,4,5.5,9];
+const ratioBreaks=[4,5,6,7,8,10];
+
+let mode='t1';
+
+function getRatio(d){ return (d&&d.t1>0)?Math.round((d.t3/d.t1)*1000)/10:null; }
+
+function getColor(numId){
+  const id=String(numId).padStart(3,'0');
+  const d=countries[id];
+  if(!d) return grayEmpty;
+  if(mode==='t1'){
+    const v=d.t1; const b=t1Breaks;
+    for(let i=0;i<b.length;i++) if(v<=b[i]) return blueRamp[i];
+    return blueRamp[5];
+  } else if(mode==='t3'){
+    const v=d.t3; const b=t3Breaks;
+    for(let i=0;i<b.length;i++) if(v<=b[i]) return blueRamp[i];
+    return blueRamp[5];
+  } else {
+    const v=getRatio(d);
+    if(v===null) return grayEmpty;
+    const b=ratioBreaks;
+    for(let i=0;i<b.length;i++) if(v<=b[i]) return greenRamp[i];
+    return greenRamp[5];
+  }
+}
+
+function getLegend(){
+  if(mode==='t1') return{ramp:blueRamp,breaks:t1Breaks,label:"% of total workforce"};
+  if(mode==='t3') return{ramp:blueRamp,breaks:t3Breaks,label:"% of total workforce"};
+  return{ramp:greenRamp,breaks:ratioBreaks,label:"Tier 3 ÷ all computer-using workers"};
+}
+
+function renderLegend(){
+  const{ramp,breaks,label}=getLegend();
+  const labels=[`≤${breaks[0]}%`,`${breaks[0]+1}–${breaks[1]}%`,
+    `${breaks[1]+1}–${breaks[2]}%`,`${breaks[2]+1}–${breaks[3]}%`,
+    `${breaks[3]+1}–${breaks[4]}%`,`>${breaks[4]}%`];
+  document.getElementById('legend').innerHTML=
+    `<span style="margin-right:4px">${label}:</span>`+
+    ramp.map((c,i)=>`<span style="display:flex;align-items:center;gap:3px">
+      <span class="ls" style="background:${c}"></span><span>${labels[i]}</span></span>`).join('')+
+    `<span style="display:flex;align-items:center;gap:3px">
+      <span class="ls" style="background:${grayEmpty}"></span><span>No estimate</span></span>`;
+}
+
+function setMode(m){
+  mode=m;
+  document.getElementById('btn-t1').classList.toggle('on',m==='t1');
+  document.getElementById('btn-t3').classList.toggle('on',m==='t3');
+  document.getElementById('btn-ratio').classList.toggle('on',m==='ratio');
+  d3.selectAll('path.ctry').attr('fill',d=>getColor(d.id));
+  renderLegend();
+}
+
+const names={
+  "004":"Afghanistan","008":"Albania","012":"Algeria","024":"Angola","032":"Argentina",
+  "036":"Australia","040":"Austria","031":"Azerbaijan","050":"Bangladesh","056":"Belgium",
+  "068":"Bolivia","070":"Bosnia & Herz.","072":"Botswana","076":"Brazil","100":"Bulgaria",
+  "108":"Burundi","116":"Cambodia","120":"Cameroon","124":"Canada","140":"Cent. African Rep.",
+  "148":"Chad","152":"Chile","156":"China","170":"Colombia","178":"Rep. of Congo",
+  "180":"DR Congo","188":"Costa Rica","191":"Croatia","192":"Cuba","196":"Cyprus",
+  "203":"Czechia","208":"Denmark","214":"Dominican Rep.","218":"Ecuador","222":"El Salvador",
+  "231":"Ethiopia","233":"Estonia","246":"Finland","250":"France","266":"Gabon",
+  "268":"Georgia","276":"Germany","288":"Ghana","300":"Greece","320":"Guatemala",
+  "324":"Guinea","332":"Haiti","340":"Honduras","344":"Hong Kong","348":"Hungary",
+  "356":"India","360":"Indonesia","364":"Iran","368":"Iraq","372":"Ireland",
+  "380":"Italy","384":"Côte d'Ivoire","388":"Jamaica","392":"Japan","398":"Kazakhstan",
+  "400":"Jordan","404":"Kenya","410":"South Korea","414":"Kuwait","417":"Kyrgyzstan",
+  "418":"Laos","422":"Lebanon","426":"Lesotho","428":"Latvia","430":"Liberia",
+  "434":"Libya","440":"Lithuania","442":"Luxembourg","446":"Macao","450":"Madagascar",
+  "454":"Malawi","458":"Malaysia","462":"Maldives","466":"Mali","470":"Malta",
+  "478":"Mauritania","480":"Mauritius","484":"Mexico","496":"Mongolia","498":"Moldova",
+  "499":"Montenegro","504":"Morocco","508":"Mozambique","512":"Oman","516":"Namibia",
+  "524":"Nepal","528":"Netherlands","554":"New Zealand","562":"Niger","566":"Nigeria",
+  "578":"Norway","586":"Pakistan","591":"Panama","600":"Paraguay","604":"Peru",
+  "608":"Philippines","616":"Poland","620":"Portugal","634":"Qatar",
+  "642":"Romania","643":"Russia","646":"Rwanda","682":"Saudi Arabia","686":"Senegal",
+  "688":"Serbia","694":"Sierra Leone","702":"Singapore","703":"Slovakia","705":"Slovenia",
+  "706":"Somalia","710":"South Africa","724":"Spain","729":"Sudan","752":"Sweden",
+  "756":"Switzerland","760":"Syria","762":"Tajikistan","764":"Thailand","788":"Tunisia",
+  "792":"Turkey","795":"Turkmenistan","800":"Uganda","804":"Ukraine","784":"UAE",
+  "826":"United Kingdom","840":"United States","858":"Uruguay","860":"Uzbekistan",
+  "862":"Venezuela","716":"Zimbabwe","275":"Palestine","807":"N. Macedonia","158":"Taiwan",
+  "051":"Armenia","048":"Bahrain","204":"Benin","854":"Burkina Faso","894":"Zambia",
+  "834":"Tanzania","044":"Bahamas","068":"Bolivia","630":"Puerto Rico",
+};
+
+const isDark=matchMedia('(prefers-color-scheme: dark)').matches;
+const strokeCol=isDark?'rgba(255,255,255,0.12)':'rgba(255,255,255,0.7)';
+const W=680,H=370;
+
+const svg=d3.select('#mc').append('svg')
+  .attr('viewBox',`0 0 ${W} ${H}`)
+  .attr('width','100%')
+  .style('display','block');
+
+const proj=d3.geoNaturalEarth1().scale(108).translate([W/2, H/2]);
+const gpath=d3.geoPath(proj);
+const tt=document.getElementById('tt');
+
+// Clip path matching the Natural Earth projection outline
+// The outline is the graticule sphere projected through geoNaturalEarth1
+const defs=svg.append('defs');
+
+defs.append('path')
+  .datum({type:'Sphere'})
+  .attr('id','sphere-clip-path')
+  .attr('d', gpath);
+
+defs.append('clipPath')
+  .attr('id','earth-clip')
+  .append('use')
+  .attr('href','#sphere-clip-path');
+
+// Ocean / background fill inside the earth outline
+svg.append('use')
+  .attr('href','#sphere-clip-path')
+  .attr('fill', isDark ? '#d0e8f5' : '#d0e8f5')
+  .attr('stroke', '#1a2a3a');
+
+d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json').then(world=>{
+  const feats=topojson.feature(world,world.objects.countries).features;
+  const borders=topojson.mesh(world,world.objects.countries,(a,b)=>a!==b);
+
+  // Countries clipped to sphere
+  svg.append('g')
+    .attr('clip-path','url(#earth-clip)')
+    .selectAll('path.ctry')
+    .data(feats)
+    .join('path')
+    .attr('class','ctry')
+    .attr('d',gpath)
+    .attr('fill',d=>getColor(d.id))
+    .attr('stroke','none')
+    .on('mousemove',function(event,d){
+      const id=String(d.id).padStart(3,'0');
+      const info=countries[id];
+      const name=names[id]||null;
+      const r=document.getElementById('mc').getBoundingClientRect();
+      tt.style.left=(event.clientX-r.left+12)+'px';
+      tt.style.top=(event.clientY-r.top-10)+'px';
+      if(!info){
+        if(!name)return;
+        tt.style.display='block';
+        tt.innerHTML=`<b>${name}</b><br><span style="color:var(--color-text-tertiary);font-size:11px">No estimate available</span>`;
+        return;
+      }
+      const ratio=getRatio(info);
+      const confColor=info.conf==='Direct'?'#3B6D11':info.conf.includes('high')||info.conf.includes('upper')?'#BA7517':'#A32D2D';
+      tt.style.display='block';
+      tt.innerHTML=`<b>${name||id}</b><br>
+        Computer-using (T1+2+3): <b>${info.t1}%</b> of workforce<br>
+        Computing profession (T3): <b>${info.t3}%</b> of workforce<br>
+        T3 ÷ computer-using: <b>${ratio!==null?ratio+'%':'—'}</b><br>
+        <span style="color:${confColor};font-size:11px">${info.conf}</span><br>
+        <span style="font-size:11px;color:var(--color-text-tertiary)">${info.src}</span>`;
+    })
+    .on('mouseleave',()=>{tt.style.display='none';});
+
+  // Internal country borders, also clipped
+  svg.append('g')
+    .attr('clip-path','url(#earth-clip)')
+    .append('path')
+    .datum(borders)
+    .attr('d',gpath)
+    .attr('fill','none')
+    .attr('stroke',strokeCol)
+    .attr('stroke-width',0.4);
+
+  // Earth outline — drawn on top, no fill, just the border stroke
+  svg.append('path')
+    .datum({type:'Sphere'})
+    .attr('d',gpath)
+    .attr('fill','none')
+    .attr('stroke', isDark?'rgba(255,255,255,0.35)':'rgba(0,0,0,0.35)')
+    .attr('stroke-width',1.0);
+
+  renderLegend();
+});
+</script>
