@@ -34,7 +34,7 @@ class: center, middle, inverse
 ---
 layout: false
 class: left, middle
-### .smaller.round[About Me] - .smaller.blue[GISer who teach Computing in Geography]
+### .smaller.round[About Me] - .smaller.blue[A GISer who teaches Computing in Geography]
 
 .split-50[.column[
 Education:  
@@ -65,9 +65,9 @@ class:center, middle
 ### Everything Happens Somewhere
  
 
-> .xx-large[Every .red.bold[event] has a .red.bold[location].] 
+> .xx-large[Every .red.bold[event] has a .red.bold[location].]  
 > .xx-large[Every .red.bold[movement] has a .red.bold[path].]  
-> .xx-large[Every .red.bold[problem] has a .red.bold[Geography].]
+> .xx-large[Every .red.bold[problem] has a .red.bold[geography].]
 
 E.g., disease, transport, housing, climate, food, education, inequality, safety, and opportunity.
 
@@ -306,7 +306,7 @@ background-size: cover
 class: left, middle
 
 .split-40[.column[
-### Active user count in campus
+### Active user count on campus
 ].column[
 <img src="resources/NUS_wifi/by-hour-count.png" width="98%"/>
 ]]
@@ -315,7 +315,7 @@ class: left, middle
 class: left, middle
 
 .split-40[.column[
-### Interaction count between users in campus
+### Interaction count between users on campus
 ].column[
 <img src="resources/NUS_wifi/by-hour-interaction.png" width="98%"/>
 ]]
@@ -358,7 +358,7 @@ class: center, middle
 
 ### So what?
 ------
-.square[What can we do with these info?]
+.square[What can we do with this information?]
 
 ---
 class:left, bottom
@@ -483,7 +483,7 @@ class: left, bottom
 background-image: url(resources/Other/earths-city-light.png)
 background-size: cover
 
-<div class="box">Earth's City Light</div>
+<div class="box">Earth's City Lights</div>
 
 .footnote-right.smaller[[Blue Marble - Night Light](https://blue-marble.de/nightlights/)]
 
@@ -502,7 +502,7 @@ class: center, middle, inverse
 
 ## The Computer Lesson
 ------
-.square[Will Everyone Works in AI?]
+.square[Will Everyone Work in AI?]
 
 ---
 class: left, middle
@@ -599,7 +599,7 @@ class: left, middle
 | Asia | 1,929M | 36.6% | 4.7% | 2.0% | 5.5% |
 | **Global** | **3,364M** | **41.3%** | **5.4%** | **2.2%** | **5.3%** |
 
-.footnote-right.smaller[Gathered with Claude; Singapore data is estimated based on IMDA report.]
+.footnote-right.smaller[Estimates compiled from cited international datasets with AI assistance; Singapore figures are estimated from IMDA data.]
 
 ---
 class: left, middle
@@ -612,7 +612,7 @@ The arrival of computers did replace some jobs, but it did not destroy the job m
 
 Some jobs disappeared. New jobs emerged. Most jobs changed because computers became part of how work was done.
 
-AI is likely to do the same: .red.bold[not simply replace the future of work, but reshape it.]
+AI is likely to do the same: .red.bold[not simply replace jobs, but reshape the future of work.]
 
 ].column[
 <img src="resources/AI-work/openclaw1.png" width="100%"/>
