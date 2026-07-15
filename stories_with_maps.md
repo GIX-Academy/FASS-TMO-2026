@@ -211,11 +211,9 @@ Urban structure changes when mobility changes.
 ].column[
 
 <img src="resources/Urban_Flow/connected_urban-unsplash.png" width="100%"/>
+ 
 
-
-.footnote-right.smaller[Photo by <a href="https://unsplash.com/@leo_visions_?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Leo_Visions</a> on <a href="https://unsplash.com/photos/vibrant-cityscape-with-illuminated-buildings-at-night-y4dJcwhgPmc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>]
-      
-
+.smaller[Photo by <a href="https://unsplash.com/@leo_visions_?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Leo_Visions</a> on <a href="https://unsplash.com/photos/vibrant-cityscape-with-illuminated-buildings-at-night-y4dJcwhgPmc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>]
 ]]
 
 ---
