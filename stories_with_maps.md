@@ -178,6 +178,8 @@ Before COVID-19
 After COVID-19
 ]]
 
+.footnote-right.smaller[[Chin et al. 2024. The Networked Community of Urban Mobility during the Pandemic](https://doi.org/10.1080/24694452.2023.2278689)]
+
 ---
 class: center, middle
 
@@ -189,6 +191,8 @@ Before COVID-19
 <img src="resources/Urban_Flow/result-3d.png" width="100%"/>
 After COVID-19
 ]]
+
+.footnote-right.smaller[[Chin et al. 2024. The Networked Community of Urban Mobility during the Pandemic](https://doi.org/10.1080/24694452.2023.2278689)]
 
 ---
 class: left, middle
@@ -425,7 +429,7 @@ class: center, middle, inverse
 
 ## One Way of Thinking, Many Worlds
 ------
-.square[Maps help us see patterns across society, nature, and the environment]
+.square[See a phenomenon, gather data, analyse it, and map the story.]
 
 ---
 class: center, middle
@@ -443,7 +447,7 @@ background-size: cover
 
 <div class="box">Wind (Typhoon)</div>
 
-.footnote-right.small[[Zoom Earth](https://zoom.earth/maps/wind-speed/#view=21.36,124.1,5z/model=icon): https://zoom.earth/]
+.footnote-right.smaller[[Zoom Earth](https://zoom.earth/maps/wind-speed/#view=21.36,124.1,5z/model=icon): https://zoom.earth/]
 
 
 
@@ -454,7 +458,7 @@ background-size: cover
 
 <div class="box">Earthquake</div>
 
-.footnote-right.small[[USGS Earthquake](https://earthquake.usgs.gov/earthquakes/map/?extent=-69.34934,55.89844&extent=71.69129,337.14844&range=search&baseLayer=ocean&timeZone=utc&search={%22name%22:%22Search%20Results%22,%22params%22:{%22starttime%22:%222026-07-07%2000:00:00%22,%22endtime%22:%222026-07-14%2023:59:59%22,%22minmagnitude%22:2.5,%22orderby%22:%22time%22,%22limit%22:500}})]
+.footnote-right.smaller[[USGS Earthquake](https://earthquake.usgs.gov/earthquakes/map/?extent=-69.34934,55.89844&extent=71.69129,337.14844&range=search&baseLayer=ocean&timeZone=utc&search={%22name%22:%22Search%20Results%22,%22params%22:{%22starttime%22:%222026-07-07%2000:00:00%22,%22endtime%22:%222026-07-14%2023:59:59%22,%22minmagnitude%22:2.5,%22orderby%22:%22time%22,%22limit%22:500}})]
 
 
 ---
@@ -464,7 +468,7 @@ background-size: cover
  
 <div class="box">Fire Event</div>
 
-.footnote-right.small[[NASA-FIRMS](https://firms.modaps.eosdis.nasa.gov/map/?utm_source=chatgpt.com#t:tsd-daily;d:2026-06-11..2026-07-10;l:fires_all,country-outline,firefly;@108.5,1.8,6.4z)]
+.footnote-right.smaller[[NASA-FIRMS](https://firms.modaps.eosdis.nasa.gov/map/?utm_source=chatgpt.com#t:tsd-daily;d:2026-06-11..2026-07-10;l:fires_all,country-outline,firefly;@108.5,1.8,6.4z)]
 
 ---
 class: right, top 
@@ -473,7 +477,7 @@ background-size: cover
  
 <div class="box">Seabird Tracking</div>
 
-.footnote-right.small[[Seabird Tracking
+.footnote-right.smaller[[Seabird Tracking
 Database](https://www.seabirdtracking.org/): https://www.seabirdtracking.org/]
 
 ---
@@ -483,7 +487,7 @@ background-size: cover
 
 <div class="box">Earth's City Light</div>
 
-.footnote-right.small[[Blue Marble - Night Light](https://blue-marble.de/nightlights/)]
+.footnote-right.smaller[[Blue Marble - Night Light](https://blue-marble.de/nightlights/)]
 
 ---
 class: center, top
@@ -492,7 +496,7 @@ background-size: cover
 
 <div class="box">Ship Map</div>
 
-.footnote-right.small[[Ship Map](https://www.shipmap.org/): https://www.shipmap.org/]
+.footnote-right.smaller[[Ship Map](https://www.shipmap.org/): https://www.shipmap.org/]
 
 ---
 class: center, middle, inverse
@@ -504,10 +508,10 @@ class: center, middle, inverse
 
 ---
 class: left, middle
-
+ 
 .split-70[.column[
 
-## The Computer Lesson
+### The Computer Lesson
 In the 1990s, many people worried that computers would replace human work.
 
 But today, most jobs did not disappear.
@@ -531,11 +535,31 @@ Taxi drivers and delivery workers use digital devices.
 ]]
 
 ---
+class: left, middle
+
+### If we group jobs by how they use computers
+
+- Tier 1 (T1) — .bold[General Computer User]  
+  Uses .red[common digital tools] for everyday work  
+  e.g.: email, web browsing, Microsoft Office
+
+- Tier 2 (T2) — .bold[Computational Proficiency]  
+  Uses .red[specialised software] for a particular field  
+  Examples: ArcGIS, AutoCAD, Adobe Illustrator 
+
+- Tier 3 (T3) — .bold[Computing Profession]  
+  .red[Builds] software, systems, models, or other .red[computing-based solutions]  
+  Examples: software development, data engineering, AI development
+
+- Computer-using (CU) — T1 + T2 + T3 
+
+
+---
 class: center, bottom
 background-image: url(resources/AI-work/computer-using.png)
 background-size: contain
 
-<div class="box">Computer-using / Total workforce</div>
+<div class="box">Computer-using (CU) / Total workforce (W)</div>
 
 .footnote.smaller[[Global Computing Workforce](https://gix-academy.github.io/FASS-TMO-2026/resources/AI-work/global_computing_workforce_map_v3.html)]
 
@@ -546,7 +570,7 @@ class: center, bottom
 background-image: url(resources/AI-work/computing-profession.png)
 background-size: contain
 
-<div class="box">Computing Profession / Total workforce</div>
+<div class="box">Computing Profession (T3) / Total workforce (W)</div>
 
 .footnote.smaller[[Global Computing Workforce](https://gix-academy.github.io/FASS-TMO-2026/resources/AI-work/global_computing_workforce_map_v3.html)]
 
@@ -557,7 +581,7 @@ class: center, bottom
 background-image: url(resources/AI-work/proportion.png)
 background-size: contain
 
-<div class="box">Computing Profession / Computer-using</div>
+<div class="box">Computing Profession (T3) / Computer-using (CU)</div>
 
 .footnote.smaller[[Global Computing Workforce](https://gix-academy.github.io/FASS-TMO-2026/resources/AI-work/global_computing_workforce_map_v3.html)]
 
@@ -567,11 +591,11 @@ background-size: contain
 ---
 class: left, middle 
 
-#### The numbers
+#### Far more people use computers in their work than develop computing technologies.
 
-| Region | Workforce (W) | Computer-using (CU=T1+T2+T3) % |  Computational proficiency (T2/W) % | Computing Profession (T3/W) % | T3 ÷ CU % |
+| Region | Total Workforce (W) | Computer-Using (CU/W) % |  Computational Proficiency (T2/W) % | Computing Profession (T3/W) % | T3/CU % |
 |---|---:|---:|---:|---:|---:|
-| Singapore | 3.6M | 90.0% | 10.0% | 5.8% | 6.4% |
+| **Singapore** | **3.6M** | **90.0%** | **10.0%** | **5.8%** | **6.4%** |
 | Europe | 388M | 67.3% | 9.1% | 4.2% | 6.2% |
 | North America | 239M | 68.2% | 9.2% | 3.8% | 5.6% |
 | Asia | 1,929M | 36.6% | 4.7% | 2.0% | 5.5% |
@@ -697,8 +721,8 @@ background-size: cover
 <!--<div class="box">Example applications</div>-->
 <img src="resources/gix/qr-gix-welcome.png" width="15%"/>
 
-.footnote-right.smaller[[https://gix-academy.github.io/welcome](https://gix-academy.github.io/welcome/)]
-
+.headnote.smaller[[https://gix-academy.github.io/welcome](https://gix-academy.github.io/welcome/)]
+ 
 ---
 class: right, top
 background-image: url(resources/gix/gix-nutshell.png)
@@ -707,7 +731,7 @@ background-size: cover
 <!--<div class="box">GIX in a nutshell</div>-->
 <img src="resources/gix/qr-gix-welcome.png" width="15%"/>
 
-.footnote-right.smaller[[https://gix-academy.github.io/welcome](https://gix-academy.github.io/welcome/)]
+.headnote.smaller[[https://gix-academy.github.io/welcome](https://gix-academy.github.io/welcome/)]
 
 
 ---
