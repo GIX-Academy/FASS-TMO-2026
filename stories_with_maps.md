@@ -7,7 +7,7 @@ use_mathjax: true
 use_mermaid: true
 add_sidebar: true
 add_searchbar: true
-use_click: false
+use_click: true
 use_scroll: true
 favicon: ./resources/favicon.ico
 
@@ -599,7 +599,7 @@ class: left, middle
 | Asia | 1,929M | 36.6% | 4.7% | 2.0% | 5.5% |
 | **Global** | **3,364M** | **41.3%** | **5.4%** | **2.2%** | **5.3%** |
 
-.footnote-right.smaller[Estimates compiled from cited international datasets with AI assistance; Singapore figures are estimated from IMDA data.]
+.footnote.smaller[Estimates from international datasets with AI assistance; Singapore figures are estimated from IMDA data.]
 
 ---
 class: left, middle
