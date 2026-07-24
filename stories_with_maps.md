@@ -7,7 +7,7 @@ use_mathjax: true
 use_mermaid: true
 add_sidebar: true
 add_searchbar: true
-use_click: true
+use_click: false
 use_scroll: true
 favicon: ./resources/favicon.ico
 
